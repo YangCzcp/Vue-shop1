@@ -1,5 +1,6 @@
 {
   "name": "shop",
+  "version": "0.1.0",
   "description": "A Vue.js project",
   "author": "YangCzcp <120726520+YangCzcp@users.noreply.github.com>",
   "private": true,
