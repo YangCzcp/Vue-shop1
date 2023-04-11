@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <h2>这是个测试</h2> -->
     <router-view />
   </div>
 </template>
@@ -13,5 +12,4 @@ export default {
 </script>
 
 <style>
-
 </style>
