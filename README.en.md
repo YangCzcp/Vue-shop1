@@ -1,4 +1,4 @@
-# shop-mall-class1
+# vue-cli-test
 
 #### Description
 闽北2101实训项目讲解
