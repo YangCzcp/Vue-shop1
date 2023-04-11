@@ -1,12 +1,15 @@
 import Vue from 'vue'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import router from '@/router/index.js'
+import '@/plugins/resquest.js'
+import store from '@/store/index.js'
 import App from './App.vue'
 
-Vue.config.productionTip = false  // 关闭生产环境提示
-
+Vue.config.productionTip = false
+Vue.use(ElementUI);
 new Vue({
-  // 在vue原型上添加了属性：$bus
-  beforeCreate(){
-    Vue.prototype.$bus = this
-  },
+  router,
+  store,
   render: h => h(App),
 }).$mount('#app')

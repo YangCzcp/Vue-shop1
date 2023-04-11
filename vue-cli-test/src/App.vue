@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-    <h2>这是测试</h2>
+    <router-view />
   </div>
 </template>
 
 <script>
+import '@/assets/css/base.css'
 export default {
-  name: "App",
-  components: {},
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
-};
+  name: 'App'
+}
 </script>
 
 <style>
