@@ -1,7 +1,7 @@
 # vue-cli-test
 
 #### Description
-闽北2101实训项目讲解
+vue项目实训
 
 #### Software Architecture
 Software architecture description

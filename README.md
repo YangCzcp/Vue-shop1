@@ -1,7 +1,7 @@
-# shop-mall-class1
+# vue-cli-test
 
 #### 介绍
-闽北2101实训项目讲解
+vue项目实训
 
 #### 软件架构
 软件架构说明
