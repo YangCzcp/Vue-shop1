@@ -8,7 +8,9 @@
         <el-menu-item-group v-if="item.children.length">
           <!-- <template slot="title">分组一</template> -->
           <el-menu-item index="1-1" v-for="(child, index2) in item.children" :key="child.id">
-            <router-link :to="child.path">{{ child.name }}</router-link>
+            <router-link :to="child.path"
+              ><span class="cate_name">{{ child.name }}</span></router-link
+            >
           </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
@@ -42,5 +44,8 @@ export default {
 a {
   color: #000;
   text-decoration: none;
+}
+.cate_name {
+  display: block;
 }
 </style>
