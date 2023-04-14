@@ -1,78 +1,81 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '@/views/Users/Login'
-import GoodsList from '@/views/Goods/List'
-import Category from '@/views/Goods/Category'
-import Release from '@/views/Goods/Release'
-import OrderList from '@/views/Order/List'
+import Login from '@/view/User/Login'
+import GoodsList from '@/view/Goods/List'
+import Release from '@/view/Goods/Release'
+import Category from '@/view/Category/List'
+import OrderList from '@/view/Orders/List'
 import Layout from '@/components/Layout'
 Vue.use(VueRouter)
-const routes = [
-    {
-        path:'/',
-        component:Login,
-        meta:{
-            requiresAuth:false
-        }
-    },
-    {
-        path:'/goods',
-        component:Layout,
-        redirect:'/goods/list',
-        meta:{
-            requiresAuth:true
-        },
-        children:[
-            {
-                path:'category',
-                component:Category
-            },
-            {
-                path:'release',
-                component:Release
-            },
-            {
-                path:'list',
-                component:GoodsList
-            }
-
-        ]
-    },
-    {
-        path:'/order',
-        component:Layout,
-        meta:{
-            requiresAuth:true
-        },
-        redirect:'/order/list',
-        children:[
-            {
-                path:'list',
-                component:OrderList
-            }
-        ]
-    }
+let routes = [
+     {
+          path: '/',
+          component: Login,
+          meta: {
+               requiredAuth: false
+          }
+     },
+     {
+          path: '/goods',
+          component: Layout,
+          redirect: '/goods/list',
+          children: [
+               {
+                    path: 'category',
+                    name: 'Category',
+                    component: Category
+               },
+               {
+                    path: 'list',
+                    component: GoodsList
+               },
+               {
+                    path: 'release',
+                    component: Release
+               }
+          ],
+          meta: {
+               requiredAuth: true
+          }
+     },
+     {
+          path: '/order',
+          component: Layout,
+          redirect: '/order/list',
+          meta: {
+               requiredAuth: true
+          },
+          children:[
+               {
+                    path:'list',
+                    component:OrderList,
+                    name:'OrderList'
+               }
+          ]
+     }
 ]
-// 路由守卫---导航守卫
-
-
 
 const router = new VueRouter({
-    routes
+     routes
 })
+// 路由守卫
+
 router.beforeEach((to, from, next) => {
-    if(to.matched.some(res=>res.meta.requiresAuth)){
-        // 需要登录
-        if(!localStorage.getItem('token')){
-            next('/')
-        }else{
-            next()
-        }
-    }else if(localStorage.getItem('token') && to.path=='/'){
-        next(from.path)
-    }else{
-        next()
-    }
+     if (to.matched.some(res => res.meta.requiredAuth)) {
+          // 需要登录
+          // 通过本地存储中的token判断是否登录
+          if (!localStorage.getItem('token')) {
+               next('/')
+          } else if (to.path != '/') {
+
+               next()
+          }
+
+     } else {
+          // 放行
+          next()
+     }
+
 })
 
 export default router

@@ -1,8 +1,10 @@
-const setProfile = (state,data)=>{
+
+const setProfile=(state,data)=>{
     state.profile = data
 }
 
 
-export default {
+
+export default{
     setProfile
 }

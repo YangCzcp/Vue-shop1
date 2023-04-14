@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const loadMenus = (params)=>axios.get('/menu/all',params) 
+const loadTree =(params)=> axios.get('/menu/all',{params})
 
-export default{
-    loadMenus
+export default  {
+    loadTree
 }

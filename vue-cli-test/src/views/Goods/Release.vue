@@ -7,8 +7,8 @@
       <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="分类">
           <el-select v-model="form.cate_1st" placeholder="请选择活动区域">
-            <el-option :label="item.name" v-for="(item, index) in cate_1st_options" :value="item.id" :kye="item.id"></el-option>
-          </el-select>
+      <el-option :label="item.name" v-for="(item, index) in cate_1st_options" :value="item.id" :key="item.id"></el-option>
+        </el-select>
           <el-select v-model="form.cate_2nd" placeholder="请选择活动区域">
             <el-option label="区域一" value="shanghai"></el-option>
             <el-option label="区域二" value="beijing"></el-option>

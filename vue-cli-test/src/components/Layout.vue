@@ -1,12 +1,15 @@
 <template>
   <div>
-    <el-container>
-      <el-header> <Header /> </el-header>
+    <el-container class="container">
+      <!-- 顶部 -->
+      <el-header><Header /></el-header>
       <el-container>
-        <el-aside width="200px">
-          <left-menu />
-        </el-aside>
-        <el-main><router-view /></el-main>
+        <!-- 左侧 -->
+        <el-aside width="200px"><left-menu /></el-aside>
+        <!-- 内容部分 -->
+        <el-main>
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -25,16 +28,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.el-container {
+.container {
   width: 100%;
-  height: 100vh;
-}
-.el-header {
-  background-color: #252526;
-  color: #fff;
-}
-.el-aside {
-  background-color: #252526;
-  color: #fff;
+  min-height: 100vh;
+  background-color: #334e66;
+
+  .el-header {
+    line-height: 60px;
+    background-color: #31404e;
+  }
+  .el-main {
+    background: #fff;
+    color: #31404e;
+  }
 }
 </style>

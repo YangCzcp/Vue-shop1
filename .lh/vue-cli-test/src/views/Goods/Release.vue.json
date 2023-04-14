@@ -1,0 +1,26 @@
+{
+    "sourceFile": "vue-cli-test/src/views/Goods/Release.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1681478906836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681478984511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n       </div>\n       <el-form ref=\"form\" :model=\"form\" label-width=\"80px\">\n         <el-form-item label=\"分类\">\n           <el-select v-model=\"form.cate_1st\" placeholder=\"请选择活动区域\">\n-            <el-option :label=\"item.name\" v-for=\"(item, index) in cate_1st_options\" :value=\"item.id\" :key=\"item.id\"></el-option>\n-          </el-select>\n+  <el-option :label=\"item.name\" v-for=\"(item, index) in cate_1st_options\" :value=\"item.id\" :key=\"item.id\"></el-option>\n+</el-select>\n           <el-select v-model=\"form.cate_2nd\" placeholder=\"请选择活动区域\">\n             <el-option label=\"区域一\" value=\"shanghai\"></el-option>\n             <el-option label=\"区域二\" value=\"beijing\"></el-option>\n           </el-select>\n"
+                },
+                {
+                    "date": 1681479009804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n       </div>\n       <el-form ref=\"form\" :model=\"form\" label-width=\"80px\">\n         <el-form-item label=\"分类\">\n           <el-select v-model=\"form.cate_1st\" placeholder=\"请选择活动区域\">\n-  <el-option :label=\"item.name\" v-for=\"(item, index) in cate_1st_options\" :value=\"item.id\" :key=\"item.id\"></el-option>\n-</el-select>\n+      <el-option :label=\"item.name\" v-for=\"(item, index) in cate_1st_options\" :value=\"item.id\" :key=\"item.id\"></el-option>\n+        </el-select>\n           <el-select v-model=\"form.cate_2nd\" placeholder=\"请选择活动区域\">\n             <el-option label=\"区域一\" value=\"shanghai\"></el-option>\n             <el-option label=\"区域二\" value=\"beijing\"></el-option>\n           </el-select>\n"
+                }
+            ],
+            "date": 1681478906836,
+            "name": "Commit-0",
+            "content": "<template>\n  <div>\n    <el-card class=\"box-card\">\n      <div slot=\"header\" class=\"clearfix\">\n        <span>发布商品</span>\n      </div>\n      <el-form ref=\"form\" :model=\"form\" label-width=\"80px\">\n        <el-form-item label=\"分类\">\n          <el-select v-model=\"form.cate_1st\" placeholder=\"请选择活动区域\">\n            <el-option :label=\"item.name\" v-for=\"(item, index) in cate_1st_options\" :value=\"item.id\" :key=\"item.id\"></el-option>\n          </el-select>\n          <el-select v-model=\"form.cate_2nd\" placeholder=\"请选择活动区域\">\n            <el-option label=\"区域一\" value=\"shanghai\"></el-option>\n            <el-option label=\"区域二\" value=\"beijing\"></el-option>\n          </el-select>\n          <el-select v-model=\"form.cate_3rd\" placeholder=\"请选择活动区域\">\n            <el-option label=\"区域一\" value=\"shanghai\"></el-option>\n            <el-option label=\"区域二\" value=\"beijing\"></el-option>\n          </el-select>\n        </el-form-item>\n      </el-form>\n    </el-card>\n  </div>\n</template>\n\n<script>\nimport { Category } from '@/api/index'\nexport default {\n  name: 'Release',\n  data() {\n    return {\n      form: {\n        cate_1st: '', // 保存一级分类选则后的值  ----id\n        cate_2nd: '',\n        cate_3rd: ''\n      },\n      cate_1st_options: [], // 一级分类的所有数据\n      cate_2nd_options: [],\n      cate_3rd_options: []\n    }\n  },\n  created() {\n    this.handelCate()\n  },\n  methods: {\n    async handelCate() {\n      let data = await this.getCateList(1)\n      this.cate_1st_options = data\n    },\n    async getCateList(id) {\n      let { status, data } = await Category.list({ pId: id })\n      if (!status) {\n        this.$message.error('分类信息获取失败')\n        return false\n      }\n      return Promise.resolve(data)\n    }\n  }\n}\n</script>\n\n<style>\n</style>"
+        }
+    ]
+}

@@ -1,17 +1,17 @@
-import actions from './actions.js'
-import mutations from './mutations.js'
-import getters from './getters.js'
+import mutations  from "./mutations"
+import actions  from "./actions"
+import getters from './getters'
 
-const state = {
-    // 保存菜单
-    menu:[]
+const state={
+    // 保存菜单信息
+    menus:[]
 }
 
 
-export default {
-    namespaced: true,
+export default{
+    namespaced:true,
     state,
-    actions,
     mutations,
+    actions,
     getters
 }
