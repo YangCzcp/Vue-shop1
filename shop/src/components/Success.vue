@@ -11,33 +11,49 @@
 
     <!-- 页面布局 -->
     <el-container style="height: calc(100vh - 80px);">
+
+
       <!-- 侧边栏 -->
       <el-aside width="200px">
         <el-menu :default-active="activeMenu" class="el-menu-vertical-demo" @select="handleSelect">
+          <!-- 二级菜单 -->
           <el-submenu index="product">
             <template slot="title">
               <i class="el-icon-goods"></i>
               <span>商品管理</span>
             </template>
-            <el-menu-item index="product-list">商品列表</el-menu-item>
-            <el-menu-item index="product-add">新增商品</el-menu-item>
+            <el-menu-item index="ProductList">商品列表</el-menu-item>
+            <el-menu-item index="ProductAdd">新增商品</el-menu-item>
           </el-submenu>
-          <el-menu-item index="order">
+
+          <el-submenu index="order">
+            <template slot="title">
             <i class="el-icon-s-order"></i>
             <span>订单管理</span>
-          </el-menu-item>
+            </template>
+            <el-menu-item index="OrderList">订单列表</el-menu-item>
+          </el-submenu>
+
           <el-menu-item index="user">
             <i class="el-icon-user"></i>
             <span>用户管理</span>
           </el-menu-item>
+
+          <el-menu-item index="data-analysis">
+            <i class="el-icon-data-analysis"></i>
+            <span>数据统计</span>
+          </el-menu-item>
+
         </el-menu>
       </el-aside>
 
+
       <!-- 主体区域 -->
       <el-main>
-        <!-- <router-view></router-view> -->
-        这是一个内容块的测试
+        <router-view></router-view>
+        <!-- 这是一个内容块的测试 -->
       </el-main>
+
     </el-container>
   </div>
 </template>
@@ -47,7 +63,7 @@ export default {
   name: 'Success',
   data() {
     return {
-      activeMenu: 'product-list',//激活的菜单项
+      activeMenu: 'ProductList',//激活的菜单项
       userInfo: {
         username: 'admin'
       }

@@ -1,0 +1,454 @@
+{
+    "sourceFile": "shop/src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 109,
+            "patches": [
+                {
+                    "date": 1681528484066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681528569171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n const routes = [\r\n   {\r\n     path: '/',\r\n     name: 'login',\r\n-    // component: Login\r\n+    component: Login\r\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n"
+                },
+                {
+                    "date": 1681528591546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login\r\n   },\r\n+  \r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n"
+                },
+                {
+                    "date": 1681528610459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,8 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login\r\n   },\r\n-  \r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n"
+                },
+                {
+                    "date": 1681528638817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n+    \r\n     component: Success,\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n"
+                },
+                {
+                    "date": 1681528671797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,12 @@\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n-    \r\n     component: Success,\r\n+    children:[\r\n+      \r\n+    ]\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681528704442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n       \r\n-    ]\r\n+    ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681528727185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n-      \r\n+      {\r\n+        path:''\r\n+      }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n"
+                },
+                {
+                    "date": 1681528736456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n       {\r\n-        path:''\r\n+        path:'',\r\n+        name:'',\r\n+        \r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681528762200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n     children:[\r\n       {\r\n         path:'',\r\n         name:'',\r\n-        \r\n+    component: Login\r\n+\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681528768104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,9 @@\n     children:[\r\n       {\r\n         path:'',\r\n         name:'',\r\n-    component: Login\r\n-\r\n+    component: Success\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681528784344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     children:[\r\n       {\r\n         path:'',\r\n         name:'',\r\n-    component: Success\r\n+        // component: Success\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681528829233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n       {\r\n-        path:'',\r\n+        path:'ProductList',\r\n         name:'',\r\n         // component: Success\r\n       }\r\n     ],\r\n"
+                },
+                {
+                    "date": 1681528852553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     children:[\r\n       {\r\n         path:'ProductList',\r\n         name:'',\r\n-        // component: Success\r\n+        component: Success\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681528937393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n+import ProductList\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681528974732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList\r\n+import ProductList from '@/view/Product/ProductList'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681528980480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList from '@/view/Product/ProductList'\r\n+import ProductList from '@/view/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529008798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     children:[\r\n       {\r\n         path:'ProductList',\r\n         name:'',\r\n-        component: Success\r\n+        // component: Success\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681529024505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n       {\r\n-        path:'ProductList',\r\n+        path:'Product',\r\n         name:'',\r\n         // component: Success\r\n       }\r\n     ],\r\n"
+                },
+                {
+                    "date": 1681529216332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList from '@/view/Product/ProductList.vue'\r\n+import Product from '@/view/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529255644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import Product from '@/view/Product/ProductList.vue'\r\n+import product-list\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529316257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import product-list\r\n+import product-list from '@/product/productList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529331273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import product-list from '@/product/productList.vue'\r\n+import productlist from '@/product/productList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529375799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import productlist from '@/product/productList.vue'\r\n+import Productlist from '@/product/productList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529449840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import Productlist from '@/product/productList.vue'\r\n+import Productlist from '@/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529466976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import Productlist from '@/Product/ProductList.vue'\r\n+import ProductList from '@/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529522490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList from '@/Product/ProductList.vue'\r\n+import ProductList from '@/view/Product/ProductList.Vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529528126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList from '@/view/Product/ProductList.Vue'\r\n+import ProductList from '@/view/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529549399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList from '@/view/Product/ProductList.vue'\r\n+import product-list from '@/view/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681529561972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import product-list from '@/view/Product/ProductList.vue'\r\n+import ProductList from '@/view/Product/ProductList.vue'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n@@ -17,9 +17,9 @@\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n       {\r\n-        path:'Product',\r\n+        path:'ProductList',\r\n         name:'',\r\n         // component: Success\r\n       }\r\n     ],\r\n"
+                },
+                {
+                    "date": 1681529581361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     component: Success,\r\n     children:[\r\n       {\r\n         path:'ProductList',\r\n-        name:'',\r\n+        name:'ProductList',\r\n         // component: Success\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n"
+                },
+                {
+                    "date": 1681538210552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n       {\r\n-        path:'ProductList',\r\n+        path:'/ProductList',\r\n         name:'ProductList',\r\n         // component: Success\r\n       }\r\n     ],\r\n"
+                },
+                {
+                    "date": 1681538293193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,17 @@\n         name:'ProductList',\r\n         // component: Success\r\n       }\r\n     ],\r\n+    {\r\n+      path: '/',\r\n+      redirect: '/product/list'\r\n+    },\r\n+    {\r\n+      path: '/product/list',\r\n+      name: 'ProductList',\r\n+      component: ProductList\r\n+    },\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681538311624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,17 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n+    path: '/',\r\n+    redirect: '/product/list'\r\n+  },\r\n+  {\r\n+    path: '/product/list',\r\n+    name: 'ProductList',\r\n+    component: ProductList\r\n+  },\r\n+  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n@@ -22,17 +31,9 @@\n         name:'ProductList',\r\n         // component: Success\r\n       }\r\n     ],\r\n-    {\r\n-      path: '/',\r\n-      redirect: '/product/list'\r\n-    },\r\n-    {\r\n-      path: '/product/list',\r\n-      name: 'ProductList',\r\n-      component: ProductList\r\n-    },\r\n+    \r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681538329560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,15 @@\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n-    children:[\r\n-      {\r\n-        path:'/ProductList',\r\n-        name:'ProductList',\r\n-        // component: Success\r\n-      }\r\n-    ],\r\n-    \r\n+    // children:[\r\n+    //   {\r\n+    //     path:'/ProductList',\r\n+    //     name:'ProductList',\r\n+    //     // component: Success\r\n+    //   }\r\n+    // ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681538713571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,12 @@\n     component: Login\r\n   },\r\n   {\r\n     path: '/',\r\n-    redirect: '/product/list'\r\n+    redirect: '/product/ProductList'\r\n   },\r\n   {\r\n-    path: '/product/list',\r\n+    path: '/product/ProductList',\r\n     name: 'ProductList',\r\n     component: ProductList\r\n   },\r\n   {\r\n"
+                },
+                {
+                    "date": 1681538748421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,18 +11,18 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login\r\n   },\r\n+  // {\r\n+  //   path: '/',\r\n+  //   redirect: '/product/ProductList'\r\n+  // },\r\n+  // {\r\n+  //   path: '/product/ProductList',\r\n+  //   name: 'ProductList',\r\n+  //   component: ProductList\r\n+  // },\r\n   {\r\n-    path: '/',\r\n-    redirect: '/product/ProductList'\r\n-  },\r\n-  {\r\n-    path: '/product/ProductList',\r\n-    name: 'ProductList',\r\n-    component: ProductList\r\n-  },\r\n-  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     // children:[\r\n"
+                },
+                {
+                    "date": 1681538758180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,17 +11,8 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login\r\n   },\r\n-  // {\r\n-  //   path: '/',\r\n-  //   redirect: '/product/ProductList'\r\n-  // },\r\n-  // {\r\n-  //   path: '/product/ProductList',\r\n-  //   name: 'ProductList',\r\n-  //   component: ProductList\r\n-  // },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n"
+                },
+                {
+                    "date": 1681538883955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,15 +15,15 @@\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n-    // children:[\r\n-    //   {\r\n-    //     path:'/ProductList',\r\n-    //     name:'ProductList',\r\n-    //     // component: Success\r\n-    //   }\r\n-    // ],\r\n+    children:[\r\n+      {\r\n+        path:'/ProductList',\r\n+        name:'ProductList',\r\n+        // component: Success\r\n+      }\r\n+    ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681538891947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n     children:[\r\n       {\r\n         path:'/ProductList',\r\n         name:'ProductList',\r\n-        // component: Success\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681539063758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n-    children:[\r\n-      {\r\n-        path:'/ProductList',\r\n-        name:'ProductList',\r\n-      }\r\n-    ],\r\n+    // children:[\r\n+    //   {\r\n+    //     path:'/ProductList',\r\n+    //     name:'ProductList',\r\n+    //   }\r\n+    // ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681539083913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n-    // children:[\r\n-    //   {\r\n-    //     path:'/ProductList',\r\n-    //     name:'ProductList',\r\n-    //   }\r\n-    // ],\r\n+    children:[\r\n+      {\r\n+        path:'/ProductList',\r\n+        name:'ProductList',\r\n+      }\r\n+    ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681539101505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n     children:[\r\n       {\r\n         path:'/ProductList',\r\n         name:'ProductList',\r\n+        component:ProductList\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681539240187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,11 @@\n       {\r\n         path:'/ProductList',\r\n         name:'ProductList',\r\n         component:ProductList\r\n+      },\r\n+      {\r\n+        path:'/ProductAdd'\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681539246646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n         name:'ProductList',\r\n         component:ProductList\r\n       },\r\n       {\r\n-        path:'/ProductAdd'\r\n+        path:'/ProductAdd',\r\n+        name:'ProductAdd'\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681539274772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList.vue'\r\n+import ProductAdd from '@/view/Product/ProductAdd'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n@@ -23,9 +24,10 @@\n         component:ProductList\r\n       },\r\n       {\r\n         path:'/ProductAdd',\r\n-        name:'ProductAdd'\r\n+        name:'ProductAdd',\r\n+\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681539284822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       },\r\n       {\r\n         path:'/ProductAdd',\r\n         name:'ProductAdd',\r\n-\r\n+        component:ProductAdd\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n"
+                },
+                {
+                    "date": 1681539290172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Vue from 'vue'\r\n import VueRouter from 'vue-router'\r\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n-import ProductList from '@/view/Product/ProductList.vue'\r\n+import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n \r\n Vue.use(VueRouter)\r\n \r\n"
+                },
+                {
+                    "date": 1681539818709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,9 @@\n     } else {\r\n       next();\r\n     }\r\n   } else {\r\n+    //放行\r\n     next();\r\n   }\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1681539825558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n })\r\n \r\n router.beforeEach((to, from, next) => {\r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n+  \r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n     if (!isLoggedIn) {\r\n       next('/');\r\n     } else {\r\n"
+                },
+                {
+                    "date": 1681539850835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,12 +37,12 @@\n   mode: 'history', //路由模式\r\n   base: process.env.BASE_URL, \r\n   routes\r\n })\r\n-\r\n+this.$router.push(route).catch(err => {  console.log('输出报错',err)})\r\n router.beforeEach((to, from, next) => {\r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n-  \r\n+\r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n     if (!isLoggedIn) {\r\n       next('/');\r\n     } else {\r\n"
+                },
+                {
+                    "date": 1681539862374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,12 +37,12 @@\n   mode: 'history', //路由模式\r\n   base: process.env.BASE_URL, \r\n   routes\r\n })\r\n-this.$router.push(route).catch(err => {  console.log('输出报错',err)})\r\n+\r\n router.beforeEach((to, from, next) => {\r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n-\r\n+  \r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n     if (!isLoggedIn) {\r\n       next('/');\r\n     } else {\r\n"
+                },
+                {
+                    "date": 1681540115779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   mode: 'history', //路由模式\r\n   base: process.env.BASE_URL, \r\n   routes\r\n })\r\n-\r\n+let lastPath = null\r\n router.beforeEach((to, from, next) => {\r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n   \r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n"
+                },
+                {
+                    "date": 1681540146583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,8 @@\n })\r\n let lastPath = null\r\n router.beforeEach((to, from, next) => {\r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n-  \r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n     if (!isLoggedIn) {\r\n       next('/');\r\n     } else {\r\n"
+                },
+                {
+                    "date": 1681540152670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,7 +50,14 @@\n   } else {\r\n     //放行\r\n     next();\r\n   }\r\n+  // 如果当前点击的路由和上一个路由相同，则阻止路由的转发\r\n+  if (to.path === lastPath) {\r\n+    return next(false)\r\n+  }\r\n+\r\n+  lastPath = to.path\r\n+  next()\r\n })\r\n \r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681540389508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,25 +39,24 @@\n   routes\r\n })\r\n let lastPath = null\r\n router.beforeEach((to, from, next) => {\r\n+  // 如果当前点击的路由和上一个路由相同，则阻止路由的转发\r\n+  if (to.path === lastPath) {\r\n+    return next(false)\r\n+  }\r\n+\r\n+  lastPath = to.path\r\n+\r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n     if (!isLoggedIn) {\r\n       next('/');\r\n     } else {\r\n       next();\r\n     }\r\n   } else {\r\n-    //放行\r\n     next();\r\n   }\r\n-  // 如果当前点击的路由和上一个路由相同，则阻止路由的转发\r\n-  if (to.path === lastPath) {\r\n-    return next(false)\r\n-  }\r\n-\r\n-  lastPath = to.path\r\n-  next()\r\n })\r\n \r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681540532551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,7 +56,13 @@\n     }\r\n   } else {\r\n     next();\r\n   }\r\n+\r\n+  // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n+  wait(100).then(() => {\r\n+    next()\r\n+  })\r\n })\r\n \r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681540879051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,6 +63,5 @@\n   wait(100).then(() => {\r\n     next()\r\n   })\r\n })\r\n-\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681540963452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n   mode: 'history', //路由模式\r\n   base: process.env.BASE_URL, \r\n   routes\r\n })\r\n+\r\n let lastPath = null\r\n router.beforeEach((to, from, next) => {\r\n   // 如果当前点击的路由和上一个路由相同，则阻止路由的转发\r\n   if (to.path === lastPath) {\r\n"
+                },
+                {
+                    "date": 1681541108559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   }\r\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n-  wait(100).then(() => {\r\n+  wait(1000).then(() => {\r\n     next()\r\n   })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681541205063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   }\r\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n-  wait(1000).then(() => {\r\n+  wait(3000).then(() => {\r\n     next()\r\n   })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681541222163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,8 @@\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n   wait(3000).then(() => {\r\n-    next()\r\n+    next('/')\r\n   })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681541247083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   }\r\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n-  wait(3000).then(() => {\r\n+  wait(100).then(() => {\r\n     next('/')\r\n   })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681541255274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,8 @@\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n   wait(100).then(() => {\r\n-    next('/')\r\n+    next()\r\n   })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681541626926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,17 +48,17 @@\n \r\n   lastPath = to.path\r\n \r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n-  if (to.matched.some(route => route.meta.requiresAuth)) {\r\n-    if (!isLoggedIn) {\r\n-      next('/');\r\n-    } else {\r\n-      next();\r\n-    }\r\n-  } else {\r\n-    next();\r\n-  }\r\n+  // if (to.matched.some(route => route.meta.requiresAuth)) {\r\n+  //   if (!isLoggedIn) {\r\n+  //     next('/');\r\n+  //   } else {\r\n+  //     next();\r\n+  //   }\r\n+  // } else {\r\n+  //   next();\r\n+  // }\r\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n   wait(100).then(() => {\r\n"
+                },
+                {
+                    "date": 1681541635803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n \r\n   lastPath = to.path\r\n \r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n+  //路由守卫\r\n   // if (to.matched.some(route => route.meta.requiresAuth)) {\r\n   //   if (!isLoggedIn) {\r\n   //     next('/');\r\n   //   } else {\r\n"
+                },
+                {
+                    "date": 1681541667400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,17 +49,17 @@\n   lastPath = to.path\r\n \r\n   const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n   //路由守卫\r\n-  // if (to.matched.some(route => route.meta.requiresAuth)) {\r\n-  //   if (!isLoggedIn) {\r\n-  //     next('/');\r\n-  //   } else {\r\n-  //     next();\r\n-  //   }\r\n-  // } else {\r\n-  //   next();\r\n-  // }\r\n+  if (to.matched.some(route => route.meta.requiresAuth)) {\r\n+    if (!isLoggedIn) {\r\n+      next('/');\r\n+    } else {\r\n+      next();\r\n+    }\r\n+  } else {\r\n+    next();\r\n+  }\r\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n   wait(100).then(() => {\r\n"
+                },
+                {
+                    "date": 1681541847799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,10 +60,10 @@\n     next();\r\n   }\r\n \r\n   // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n-  const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n-  wait(100).then(() => {\r\n-    next()\r\n-  })\r\n+  // const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n+  // wait(100).then(() => {\r\n+  //   next()\r\n+  // })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681541996245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,11 @@\n   } else {\r\n     next();\r\n   }\r\n \r\n-  // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n-  // const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n-  // wait(100).then(() => {\r\n-  //   next()\r\n-  // })\r\n+  使用 Promise 对象在异步请求完成后再进行路由跳转\r\n+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n+  wait(100).then(() => {\r\n+    next()\r\n+  })\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681542915589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,12 @@\n   } else {\r\n     next();\r\n   }\r\n \r\n-  使用 Promise 对象在异步请求完成后再进行路由跳转\r\n+  // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n   wait(100).then(() => {\r\n     next()\r\n   })\r\n+  \r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681542954245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,12 +59,13 @@\n   } else {\r\n     next();\r\n   }\r\n \r\n-  // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n+  // 使用 Promise 对象在异步请求完成后再进行路由跳转 \r\n+  //解决Vue重复点击相同路由,报 Uncaught (in promise)\r\n   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n   wait(100).then(() => {\r\n     next()\r\n   })\r\n-  \r\n+\r\n })\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681543556699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n-\r\n+import user from '@/view/User/user'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681543611717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,13 @@\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n       }\r\n     ],\r\n+    {\r\n+      path:'/user',\r\n+      name:'user',\r\n+\r\n+    },\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681543644410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,13 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n+    path:'/user',\r\n+    name:'user',\r\n+\r\n+  },\r\n+  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n@@ -28,13 +33,8 @@\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n       }\r\n     ],\r\n-    {\r\n-      path:'/user',\r\n-      name:'user',\r\n-\r\n-    },\r\n     meta: { requiresAuth: true } //身份验证\r\n   }\r\n ]\r\n \r\n"
+                },
+                {
+                    "date": 1681543659965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   },\r\n   {\r\n     path:'/user',\r\n     name:'user',\r\n-\r\n+    component:user\r\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n"
+                },
+                {
+                    "date": 1681543888513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n-    path:'/user',\r\n+    path:'/view/User/user',\r\n     name:'user',\r\n     component:user\r\n   },\r\n   {\r\n"
+                },
+                {
+                    "date": 1681543915425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n-    path:'/view/User/user',\r\n+    path:'/User/user',\r\n     name:'user',\r\n     component:user\r\n   },\r\n   {\r\n"
+                },
+                {
+                    "date": 1681543924112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n-    path:'/User/user',\r\n+    path:'/user',\r\n     name:'user',\r\n     component:user\r\n   },\r\n   {\r\n"
+                },
+                {
+                    "date": 1681543942219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,14 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login\r\n   },\r\n+  // {\r\n+  //   path:'/user',\r\n+  //   name:'user',\r\n+  //   component:user\r\n+  // },\r\n   {\r\n-    path:'/user',\r\n-    name:'user',\r\n-    component:user\r\n-  },\r\n-  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n"
+                },
+                {
+                    "date": 1681544476034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n-import user from '@/view/User/user'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681544569781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,21 +3,17 @@\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n+import order from '@/Order/order'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n     path: '/',\r\n     name: 'login',\r\n     component: Login\r\n   },\r\n-  // {\r\n-  //   path:'/user',\r\n-  //   name:'user',\r\n-  //   component:user\r\n-  // },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n"
+                },
+                {
+                    "date": 1681544587223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n+    path:'/order'\r\n+  }\r\n+  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n"
+                },
+                {
+                    "date": 1681544597627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,11 @@\n     name: 'login',\r\n     component: Login\r\n   },\r\n   {\r\n-    path:'/order'\r\n-  }\r\n+    path:'/order',\r\n+    name:'order'\r\n+  },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n"
+                },
+                {
+                    "date": 1681544608912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n     component: Login\r\n   },\r\n   {\r\n     path:'/order',\r\n-    name:'order'\r\n+    name:'order',\r\n+    component:order\r\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n"
+                },
+                {
+                    "date": 1681545458379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n import order from '@/Order/order'\r\n+import orders from '@/Order/orders'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681545471479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,13 @@\n     name:'order',\r\n     component:order\r\n   },\r\n   {\r\n+    path:'/order',\r\n+    name:'order',\r\n+    component:order\r\n+  },\r\n+  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n"
+                },
+                {
+                    "date": 1681545476860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n     name:'order',\r\n     component:order\r\n   },\r\n   {\r\n-    path:'/order',\r\n-    name:'order',\r\n-    component:order\r\n+    path:'/orders',\r\n+    name:'orders',\r\n+    component:orders\r\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n"
+                },
+                {
+                    "date": 1681545515779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,10 @@\n     path:'/order',\r\n     name:'order',\r\n     component:order\r\n   },\r\n+  \r\n   {\r\n-    path:'/orders',\r\n-    name:'orders',\r\n-    component:orders\r\n-  },\r\n-  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n@@ -40,9 +36,14 @@\n         component:ProductAdd\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n-  }\r\n+  },\r\n+  {\r\n+    path:'/orders',\r\n+    name:'orders',\r\n+    component:orders\r\n+  },\r\n ]\r\n \r\n const router = new VueRouter({\r\n   mode: 'history', //路由模式\r\n"
+                },
+                {
+                    "date": 1681545721090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,13 +37,8 @@\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n-  {\r\n-    path:'/orders',\r\n-    name:'orders',\r\n-    component:orders\r\n-  },\r\n ]\r\n \r\n const router = new VueRouter({\r\n   mode: 'history', //路由模式\r\n"
+                },
+                {
+                    "date": 1681545733639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,17 +11,21 @@\n const routes = [\r\n   {\r\n     path: '/',\r\n     name: 'login',\r\n-    component: Login\r\n+    component: Login //登录页\r\n   },\r\n   {\r\n     path:'/order',\r\n     name:'order',\r\n     component:order\r\n   },\r\n-  \r\n   {\r\n+    path:'/orders',\r\n+    name:'orders',\r\n+    component:orders\r\n+  },\r\n+  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success,\r\n     children:[\r\n"
+                },
+                {
+                    "date": 1681545742671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   },\r\n   {\r\n     path:'/order',\r\n     name:'order',\r\n-    component:order\r\n+    component:order、、、\r\n   },\r\n   {\r\n     path:'/orders',\r\n     name:'orders',\r\n"
+                },
+                {
+                    "date": 1681545755984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   },\r\n   {\r\n     path:'/order',\r\n     name:'order',\r\n-    component:order、、、\r\n+    component:order  //订单管理-1\r\n   },\r\n   {\r\n     path:'/orders',\r\n     name:'orders',\r\n"
+                },
+                {
+                    "date": 1681545781625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   },\r\n   {\r\n     path:'/orders',\r\n     name:'orders',\r\n-    component:orders\r\n+    component:orders //订单管理-2 详情\r\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n"
+                },
+                {
+                    "date": 1681545807526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n-    component: Success,\r\n+    component: Success, //商城页面\r\n     children:[\r\n       {\r\n         path:'/ProductList',\r\n         name:'ProductList',\r\n"
+                },
+                {
+                    "date": 1681546782695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n import order from '@/Order/order'\r\n-import orders from '@/Order/orders'\r\n+import orders from '@/view/dingdan/orders'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681546855128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n import order from '@/Order/order'\r\n-import orders from '@/view/dingdan/orders'\r\n+import orders from '@/Order/orders'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681547090103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n import order from '@/Order/order'\r\n-import orders from '@/Order/orders'\r\n+import index from '@/Order/index'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n@@ -19,11 +19,11 @@\n     name:'order',\r\n     component:order  //订单管理-1\r\n   },\r\n   {\r\n-    path:'/orders',\r\n-    name:'orders',\r\n-    component:orders //订单管理-2 详情\r\n+    path:'/index',\r\n+    name:'index',\r\n+    component:index //订单管理-2 详情\r\n   },\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n"
+                },
+                {
+                    "date": 1681548732154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,30 +53,30 @@\n let lastPath = null\r\n router.beforeEach((to, from, next) => {\r\n   // 如果当前点击的路由和上一个路由相同，则阻止路由的转发\r\n   if (to.path === lastPath) {\r\n-    return next(false)\r\n+    return next(false);\r\n   }\r\n \r\n-  lastPath = to.path\r\n+  lastPath = to.path;\r\n \r\n-  const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n+  const isLoggedIn = localStorage.getItem(\"isLoggedIn\");\r\n   //路由守卫\r\n   if (to.matched.some(route => route.meta.requiresAuth)) {\r\n     if (!isLoggedIn) {\r\n-      next('/');\r\n+      next(\"/\");\r\n     } else {\r\n       next();\r\n     }\r\n   } else {\r\n     next();\r\n   }\r\n \r\n-  // 使用 Promise 对象在异步请求完成后再进行路由跳转 \r\n-  //解决Vue重复点击相同路由,报 Uncaught (in promise)\r\n-  const wait = ms => new Promise(resolve => setTimeout(resolve, ms))\r\n+  // 使用 Promise 对象在异步请求完成后再进行路由跳转\r\n+  // 解决Vue重复点击相同路由,报 Uncaught (in promise)\r\n+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));\r\n   wait(100).then(() => {\r\n-    next()\r\n-  })\r\n+    return;\r\n+  });  \r\n+});\r\n \r\n-})\r\n export default router //路由导出\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681548848386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,10 @@\n     path:'/order',\r\n     name:'order',\r\n     component:order  //订单管理-1\r\n   },\r\n+\r\n   {\r\n-    path:'/index',\r\n-    name:'index',\r\n-    component:index //订单管理-2 详情\r\n-  },\r\n-  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success, //商城页面\r\n     children:[\r\n"
+                },
+                {
+                    "date": 1681548856282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,8 @@\n     path:'/order',\r\n     name:'order',\r\n     component:order  //订单管理-1\r\n   },\r\n-\r\n   {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success, //商城页面\r\n@@ -33,9 +32,14 @@\n       {\r\n         path:'/ProductAdd',\r\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n-      }\r\n+      },\r\n+      {\r\n+        path:'/index',\r\n+        name:'index',\r\n+        component:index //订单管理-2 详情\r\n+      },\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n ]\r\n"
+                },
+                {
+                    "date": 1681548893964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,13 @@\n     name:'order',\r\n     component:order  //订单管理-1\r\n   },\r\n   {\r\n+    path:'/index',\r\n+    name:'index',\r\n+    component:index //订单管理-2 详情\r\n+  },\r\n+  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success, //商城页面\r\n     children:[\r\n@@ -32,14 +37,9 @@\n       {\r\n         path:'/ProductAdd',\r\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n-      },\r\n-      {\r\n-        path:'/index',\r\n-        name:'index',\r\n-        component:index //订单管理-2 详情\r\n-      },\r\n+      }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n ]\r\n"
+                },
+                {
+                    "date": 1681548903191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,10 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login //登录页\r\n   },\r\n+  \r\n   {\r\n-    path:'/order',\r\n-    name:'order',\r\n-    component:order  //订单管理-1\r\n-  },\r\n-  {\r\n     path:'/index',\r\n     name:'index',\r\n     component:index //订单管理-2 详情\r\n   },\r\n@@ -37,9 +33,14 @@\n       {\r\n         path:'/ProductAdd',\r\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n-      }\r\n+      },\r\n+      {\r\n+        path:'/order',\r\n+        name:'order',\r\n+        component:order  //订单管理-1\r\n+      },\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n ]\r\n"
+                },
+                {
+                    "date": 1681548948348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,14 @@\n     path: '/',\r\n     name: 'login',\r\n     component: Login //登录页\r\n   },\r\n-  \r\n   {\r\n+    path:'/order',\r\n+    name:'order',\r\n+    component:order  //订单管理-1\r\n+  },\r\n+  {\r\n     path:'/index',\r\n     name:'index',\r\n     component:index //订单管理-2 详情\r\n   },\r\n@@ -33,14 +37,9 @@\n       {\r\n         path:'/ProductAdd',\r\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n-      },\r\n-      {\r\n-        path:'/order',\r\n-        name:'order',\r\n-        component:order  //订单管理-1\r\n-      },\r\n+      }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n ]\r\n"
+                },
+                {
+                    "date": 1681549531694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,8 @@\n     name: 'login',\r\n     component: Login //登录页\r\n   },\r\n   {\r\n-    path:'/order',\r\n-    name:'order',\r\n-    component:order  //订单管理-1\r\n-  },\r\n-  {\r\n     path:'/index',\r\n     name:'index',\r\n     component:index //订单管理-2 详情\r\n   },\r\n"
+                },
+                {
+                    "date": 1681549538676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,8 @@\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n-import order from '@/Order/order'\r\n-import index from '@/Order/index'\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681549557998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n+\r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1681549582903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,8 @@\n     name: 'login',\r\n     component: Login //登录页\r\n   },\r\n   {\r\n-    path:'/index',\r\n-    name:'index',\r\n-    component:index //订单管理-2 详情\r\n-  },\r\n-  {\r\n     path: '/success',\r\n     name: 'success',\r\n     component: Success, //商城页面\r\n     children:[\r\n"
+                },
+                {
+                    "date": 1681549790236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Login from '@/view/User/Login'\r\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n+import OrderList from  '@/view/Order/OrderList'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681549833044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,13 @@\n       {\r\n         path:'/ProductAdd',\r\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n+      },\r\n+      {\r\n+        path:'/ProductAdd',\r\n+        name:'ProductAdd',\r\n+        component:ProductAdd\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n"
+                },
+                {
+                    "date": 1681549852202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,11 @@\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n       },\r\n       {\r\n-        path:'/ProductAdd',\r\n-        name:'ProductAdd',\r\n-        component:ProductAdd\r\n+        path:'/OrderList',\r\n+        name:'OrderList',\r\n+        component:OrderList\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n"
+                }
+            ],
+            "date": 1681528484066,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue'\r\nimport VueRouter from 'vue-router'\r\nimport Login from '@/view/User/Login'\r\nimport Success from '@/components/Success.vue'\r\n\r\nVue.use(VueRouter)\r\n\r\nconst routes = [\r\n  {\r\n    path: '/',\r\n    name: 'login',\r\n    // component: Login\r\n  },\r\n  {\r\n    path: '/success',\r\n    name: 'success',\r\n    component: Success,\r\n    meta: { requiresAuth: true } //身份验证\r\n  }\r\n]\r\n\r\nconst router = new VueRouter({\r\n  mode: 'history', //路由模式\r\n  base: process.env.BASE_URL, \r\n  routes\r\n})\r\n\r\nrouter.beforeEach((to, from, next) => {\r\n  const isLoggedIn = localStorage.getItem('isLoggedIn');\r\n  if (to.matched.some(route => route.meta.requiresAuth)) {\r\n    if (!isLoggedIn) {\r\n      next('/');\r\n    } else {\r\n      next();\r\n    }\r\n  } else {\r\n    next();\r\n  }\r\n})\r\n\r\nexport default router //路由导出"
+        }
+    ]
+}

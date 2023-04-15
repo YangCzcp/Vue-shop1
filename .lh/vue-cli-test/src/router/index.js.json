@@ -1,0 +1,42 @@
+{
+    "sourceFile": "vue-cli-test/src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1681527607517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681527621834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Vue from 'vue'\n import VueRouter from 'vue-router'\n import Login from '@/view/User/Login'//首页-登录页\n-import GoodsList from '@/view/Goods/List'\n+import GoodsList from '@/view/Goods/List'//商品\n import Release from '@/view/Goods/Release'\n import Category from '@/view/Category/List'\n import OrderList from '@/view/Orders/List'\n import Layout from '@/components/Layout'\n"
+                },
+                {
+                    "date": 1681527702643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Vue from 'vue'\n import VueRouter from 'vue-router'\n import Login from '@/view/User/Login'//首页-登录页\n-import GoodsList from '@/view/Goods/List'//商品\n+import GoodsList from '@/view/Goods/List'//商品主页\n import Release from '@/view/Goods/Release'\n import Category from '@/view/Category/List'\n import OrderList from '@/view/Orders/List'\n import Layout from '@/components/Layout'\n@@ -18,23 +18,23 @@\n      {\n           path: '/goods',\n           component: Layout,\n           redirect: '/goods/list',\n-          children: [\n-               {\n-                    path: 'category',\n-                    name: 'Category',\n-                    component: Category\n-               },\n-               {\n-                    path: 'list',\n-                    component: GoodsList\n-               },\n-               {\n-                    path: 'release',\n-                    component: Release\n-               }\n-          ],\n+          // children: [\n+          //      {\n+          //           path: 'category',\n+          //           name: 'Category',\n+          //           component: Category\n+          //      },\n+          //      {\n+          //           path: 'list',\n+          //           component: GoodsList\n+          //      },\n+          //      {\n+          //           path: 'release',\n+          //           component: Release\n+          //      }\n+          // ],\n           meta: {\n                requiredAuth: true\n           }\n      },\n"
+                },
+                {
+                    "date": 1681527735949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,23 +18,23 @@\n      {\n           path: '/goods',\n           component: Layout,\n           redirect: '/goods/list',\n-          // children: [\n-          //      {\n-          //           path: 'category',\n-          //           name: 'Category',\n-          //           component: Category\n-          //      },\n-          //      {\n-          //           path: 'list',\n-          //           component: GoodsList\n-          //      },\n-          //      {\n-          //           path: 'release',\n-          //           component: Release\n-          //      }\n-          // ],\n+          children: [\n+               {\n+                    path: 'category',\n+                    name: 'Category',\n+                    component: Category\n+               },\n+               {\n+                    path: 'list',\n+                    component: GoodsList\n+               },\n+               {\n+                    path: 'release',\n+                    component: Release\n+               }\n+          ],\n           meta: {\n                requiredAuth: true\n           }\n      },\n"
+                },
+                {
+                    "date": 1681527749187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,16 @@\n                     path: 'category',\n                     name: 'Category',\n                     component: Category\n                },\n-               {\n-                    path: 'list',\n-                    component: GoodsList\n-               },\n-               {\n-                    path: 'release',\n-                    component: Release\n-               }\n+               // {\n+               //      path: 'list',\n+               //      component: GoodsList\n+               // },\n+               // {\n+               //      path: 'release',\n+               //      component: Release\n+               // }\n           ],\n           meta: {\n                requiredAuth: true\n           }\n"
+                },
+                {
+                    "date": 1681527761536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,13 +24,13 @@\n                     path: 'category',\n                     name: 'Category',\n                     component: Category\n                },\n+               {\n+                    path: 'list',\n+                    component: GoodsList\n+               },\n                // {\n-               //      path: 'list',\n-               //      component: GoodsList\n-               // },\n-               // {\n                //      path: 'release',\n                //      component: Release\n                // }\n           ],\n"
+                },
+                {
+                    "date": 1681527806839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,12 +28,12 @@\n                {\n                     path: 'list',\n                     component: GoodsList\n                },\n-               // {\n-               //      path: 'release',\n-               //      component: Release\n-               // }\n+               {\n+                    path: 'release',\n+                    component: Release\n+               }\n           ],\n           meta: {\n                requiredAuth: true\n           }\n"
+                }
+            ],
+            "date": 1681527607517,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue'\nimport VueRouter from 'vue-router'\nimport Login from '@/view/User/Login'//首页-登录页\nimport GoodsList from '@/view/Goods/List'\nimport Release from '@/view/Goods/Release'\nimport Category from '@/view/Category/List'\nimport OrderList from '@/view/Orders/List'\nimport Layout from '@/components/Layout'\nVue.use(VueRouter)\nlet routes = [\n     {\n          path: '/',\n          component: Login,\n          meta: {\n               requiredAuth: false\n          }\n     },\n     {\n          path: '/goods',\n          component: Layout,\n          redirect: '/goods/list',\n          children: [\n               {\n                    path: 'category',\n                    name: 'Category',\n                    component: Category\n               },\n               {\n                    path: 'list',\n                    component: GoodsList\n               },\n               {\n                    path: 'release',\n                    component: Release\n               }\n          ],\n          meta: {\n               requiredAuth: true\n          }\n     },\n     {\n          path: '/order',\n          component: Layout,\n          redirect: '/order/list',\n          meta: {\n               requiredAuth: true\n          },\n          children:[\n               {\n                    path:'list',\n                    component:OrderList,\n                    name:'OrderList'\n               }\n          ]\n     }\n]\n\nconst router = new VueRouter({\n     routes\n})\n// 路由守卫\n\nrouter.beforeEach((to, from, next) => {\n     if (to.matched.some(res => res.meta.requiredAuth)) {\n          // 需要登录\n          // 通过本地存储中的token判断是否登录\n          if (!localStorage.getItem('token')) {\n               next('/')\n          } else if (to.path != '/') {\n\n               next()\n          }\n\n     } else {\n          // 放行\n          next()\n     }\n\n})\n\nexport default router"
+        }
+    ]
+}

@@ -1,0 +1,262 @@
+{
+    "sourceFile": "shop/src/components/Success.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 61,
+            "patches": [
+                {
+                    "date": 1681525027587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681525040135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n   data() {\r\n     return {\r\n       activeMenu: 'product-list',//激活的菜单项\r\n       userInfo: {\r\n-        username: '{{this.loogn.form.username}}'\r\n+        username: '{{$this.loogn.form.username}}'\r\n       }\r\n     }\r\n   },\r\n   methods: {\r\n"
+                },
+                {
+                    "date": 1681525063220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n   data() {\r\n     return {\r\n       activeMenu: 'product-list',//激活的菜单项\r\n       userInfo: {\r\n-        username: '{{$this.loogn.form.username}}'\r\n+        username: 'admin'\r\n       }\r\n     }\r\n   },\r\n   methods: {\r\n"
+                },
+                {
+                    "date": 1681525104201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n     </el-header>\r\n \r\n     <!-- 页面布局 -->\r\n     <el-container style=\"height: calc(100vh - 80px);\">\r\n+\r\n+      \r\n       <!-- 侧边栏 -->\r\n       <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n           <el-submenu index=\"product\">\r\n"
+                },
+                {
+                    "date": 1681525115049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n     <!-- 页面布局 -->\r\n     <el-container style=\"height: calc(100vh - 80px);\">\r\n \r\n-      \r\n+\r\n       <!-- 侧边栏 -->\r\n       <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n           <el-submenu index=\"product\">\r\n@@ -27,8 +27,9 @@\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n+          \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n"
+                },
+                {
+                    "date": 1681525120610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,14 @@\n             </template>\r\n             <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n+          \r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n-          \r\n+\r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n"
+                },
+                {
+                    "date": 1681525156300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             </template>\r\n             <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n-          \r\n+\r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n@@ -33,8 +33,10 @@\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n+\r\n+          \r\n         </el-menu>\r\n       </el-aside>\r\n \r\n       <!-- 主体区域 -->\r\n"
+                },
+                {
+                    "date": 1681525163291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,12 +34,12 @@\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n-          \r\n         </el-menu>\r\n       </el-aside>\r\n \r\n+      \r\n       <!-- 主体区域 -->\r\n       <el-main>\r\n         <!-- <router-view></router-view> -->\r\n         这是一个内容块的测试\r\n"
+                },
+                {
+                    "date": 1681525180493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,14 +37,15 @@\n \r\n         </el-menu>\r\n       </el-aside>\r\n \r\n-      \r\n+\r\n       <!-- 主体区域 -->\r\n       <el-main>\r\n         <!-- <router-view></router-view> -->\r\n         这是一个内容块的测试\r\n       </el-main>\r\n+      \r\n     </el-container>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1681525195716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n       <el-main>\r\n         <!-- <router-view></router-view> -->\r\n         这是一个内容块的测试\r\n       </el-main>\r\n-      \r\n+\r\n     </el-container>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1681525292296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,12 @@\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n+          <el-menu-item index=\"shuju\">\r\n+            <i class=\"el-icon-user\"></i>\r\n+            <span>数据统计</span>\r\n+          </el-menu-item>\r\n         </el-menu>\r\n       </el-aside>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1681525298583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"shuju\">\r\n-            <i class=\"el-icon-user\"></i>\r\n+            <i class=\"el-icon-shuju\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n         </el-menu>\r\n       </el-aside>\r\n"
+                },
+                {
+                    "date": 1681525314903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n-          <el-menu-item index=\"shuju\">\r\n+          <el-menu-item index=\"statistics\">\r\n             <i class=\"el-icon-shuju\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n         </el-menu>\r\n"
+                },
+                {
+                    "date": 1681525322086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"statistics\">\r\n-            <i class=\"el-icon-shuju\"></i>\r\n+            <i class=\"el-icon-statistics\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n         </el-menu>\r\n       </el-aside>\r\n"
+                },
+                {
+                    "date": 1681525328732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n           <el-menu-item index=\"statistics\">\r\n             <i class=\"el-icon-statistics\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n+          \r\n         </el-menu>\r\n       </el-aside>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1681525339537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n \r\n       <!-- 侧边栏 -->\r\n       <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n+          \r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n@@ -38,9 +39,9 @@\n           <el-menu-item index=\"statistics\">\r\n             <i class=\"el-icon-statistics\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n-          \r\n+\r\n         </el-menu>\r\n       </el-aside>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1681525540334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n       <!-- 侧边栏 -->\r\n       <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n-          \r\n+\r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n@@ -35,10 +35,10 @@\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n-          <el-menu-item index=\"statistics\">\r\n-            <i class=\"el-icon-statistics\"></i>\r\n+          <el-menu-item index=\"data-analysis\">\r\n+            <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n \r\n         </el-menu>\r\n"
+                },
+                {
+                    "date": 1681526864119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n       <!-- 侧边栏 -->\r\n       <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n-\r\n+          <!-- 二级菜单 -->\r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n"
+                },
+                {
+                    "date": 1681526884431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n \r\n       <!-- 主体区域 -->\r\n       <el-main>\r\n-        <!-- <router-view></router-view> -->\r\n+        <router-view></router-view>\r\n         这是一个内容块的测试\r\n       </el-main>\r\n \r\n     </el-container>\r\n"
+                },
+                {
+                    "date": 1681529103197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n+            <el-menu-item index=\"product\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n@@ -47,9 +47,9 @@\n \r\n       <!-- 主体区域 -->\r\n       <el-main>\r\n         <router-view></router-view>\r\n-        这是一个内容块的测试\r\n+        <!-- 这是一个内容块的测试 -->\r\n       </el-main>\r\n \r\n     </el-container>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1681529130552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"product\">商品列表</el-menu-item>\r\n+            <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n"
+                },
+                {
+                    "date": 1681529642329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n+            <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n"
+                },
+                {
+                    "date": 1681529752073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n+            <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n"
+                },
+                {
+                    "date": 1681538443480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n+import ProductList from '@/views/product/ProductList.vue'\r\n export default {\r\n   name: 'Success',\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1681538460769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,11 @@\n <script>\r\n import ProductList from '@/views/product/ProductList.vue'\r\n export default {\r\n   name: 'Success',\r\n+  components: {\r\n+    ProductList\r\n+  },\r\n   data() {\r\n     return {\r\n       activeMenu: 'product-list',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681538473445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n-import ProductList from '@/views/product/ProductList.vue'\r\n+import ProductList from '@/view/product/ProductList.vue'\r\n export default {\r\n   name: 'Success',\r\n   components: {\r\n     ProductList\r\n"
+                },
+                {
+                    "date": 1681538488469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n-import ProductList from '@/view/product/ProductList.vue'\r\n+import ProductList from '@/view/Product/ProductList.vue'\r\n export default {\r\n   name: 'Success',\r\n   components: {\r\n     ProductList\r\n"
+                },
+                {
+                    "date": 1681538518444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,15 @@\n   name: 'Success',\r\n   components: {\r\n     ProductList\r\n   },\r\n+  children: [\r\n+    {\r\n+      path: 'list',\r\n+      name: 'ProductList',\r\n+      component: ProductList\r\n+    }\r\n+  ]\r\n   data() {\r\n     return {\r\n       activeMenu: 'product-list',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681538934808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,15 +61,8 @@\n   name: 'Success',\r\n   components: {\r\n     ProductList\r\n   },\r\n-  children: [\r\n-    {\r\n-      path: 'list',\r\n-      name: 'ProductList',\r\n-      component: ProductList\r\n-    }\r\n-  ]\r\n   data() {\r\n     return {\r\n       activeMenu: 'product-list',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681539017003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     ProductList\r\n   },\r\n   data() {\r\n     return {\r\n-      activeMenu: 'product-list',//激活的菜单项\r\n+      activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       }\r\n     }\r\n"
+                },
+                {
+                    "date": 1681539025663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             <template slot=\"title\">\r\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n+            <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n"
+                },
+                {
+                    "date": 1681539183943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n-            <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n+            <el-menu-item index=\"productAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n"
+                },
+                {
+                    "date": 1681539196744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n               <i class=\"el-icon-goods\"></i>\r\n               <span>商品管理</span>\r\n             </template>\r\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n-            <el-menu-item index=\"productAdd\">新增商品</el-menu-item>\r\n+            <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n"
+                },
+                {
+                    "date": 1681539337569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,9 @@\n \r\n       <!-- 主体区域 -->\r\n       <el-main>\r\n         <router-view></router-view>\r\n+        <h2>hello</h2>\r\n         <!-- 这是一个内容块的测试 -->\r\n       </el-main>\r\n \r\n     </el-container>\r\n"
+                },
+                {
+                    "date": 1681539372593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,8 @@\n \r\n       <!-- 主体区域 -->\r\n       <el-main>\r\n         <router-view></router-view>\r\n-        <h2>hello</h2>\r\n         <!-- 这是一个内容块的测试 -->\r\n       </el-main>\r\n \r\n     </el-container>\r\n"
+                },
+                {
+                    "date": 1681539426936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,8 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n-import ProductList from '@/view/Product/ProductList.vue'\r\n export default {\r\n   name: 'Success',\r\n   components: {\r\n     ProductList\r\n"
+                },
+                {
+                    "date": 1681539435002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,11 @@\n \r\n <script>\r\n export default {\r\n   name: 'Success',\r\n-  components: {\r\n-    ProductList\r\n-  },\r\n+  // components: {\r\n+  //   ProductList\r\n+  // },\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681539470600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   //   ProductList\r\n   // },\r\n   data() {\r\n     return {\r\n-      activeMenu: 'ProductList',//激活的菜单项\r\n+      // activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       }\r\n     }\r\n"
+                },
+                {
+                    "date": 1681539494669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   //   ProductList\r\n   // },\r\n   data() {\r\n     return {\r\n-      // activeMenu: 'ProductList',//激活的菜单项\r\n+      activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       }\r\n     }\r\n"
+                },
+                {
+                    "date": 1681539545533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   //   ProductList\r\n   // },\r\n   data() {\r\n     return {\r\n-      activeMenu: 'ProductList',//激活的菜单项\r\n+      activeMenu: 'ProductLis',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       }\r\n     }\r\n"
+                },
+                {
+                    "date": 1681539587080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   //   ProductList\r\n   // },\r\n   data() {\r\n     return {\r\n-      activeMenu: 'ProductLis',//激活的菜单项\r\n+      activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       }\r\n     }\r\n"
+                },
+                {
+                    "date": 1681543445426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n-          <el-menu-item index=\"user\">\r\n+          <el-menu-item index=\"User\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681543517907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n-          <el-menu-item index=\"User\">\r\n+          <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681543689739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,11 @@\n \r\n <script>\r\n export default {\r\n   name: 'Success',\r\n-  // components: {\r\n-  //   ProductList\r\n-  // },\r\n+  components: {\r\n+    ProductList\r\n+  },\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681543696946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,10 @@\n <script>\r\n export default {\r\n   name: 'Success',\r\n   components: {\r\n-    ProductList\r\n+    ProductList,\r\n+    user\r\n   },\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n"
+                },
+                {
+                    "date": 1681543723369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,12 +55,13 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n+import user from '@/view/User/user.vue'\r\n export default {\r\n   name: 'Success',\r\n   components: {\r\n-    ProductList,\r\n+    // ProductList,\r\n     user\r\n   },\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1681544028764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,15 +55,15 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n-import user from '@/view/User/user.vue'\r\n+// import user from '@/view/User/user.vue'\r\n export default {\r\n   name: 'Success',\r\n-  components: {\r\n-    // ProductList,\r\n-    user\r\n-  },\r\n+  // components: {\r\n+  //   // ProductList,\r\n+  //   user\r\n+  // },\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681544466123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,8 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n-// import user from '@/view/User/user.vue'\r\n export default {\r\n   name: 'Success',\r\n   // components: {\r\n   //   // ProductList,\r\n"
+                },
+                {
+                    "date": 1681544497660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"order\">\r\n+          <el-menu-item index=\"Order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n@@ -57,12 +57,8 @@\n \r\n <script>\r\n export default {\r\n   name: 'Success',\r\n-  // components: {\r\n-  //   // ProductList,\r\n-  //   user\r\n-  // },\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n"
+                },
+                {
+                    "date": 1681544525963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"Order\">\r\n+          <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681546385069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"order\">\r\n+          <el-menu-item index=\"orders\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681546412079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"orders\">\r\n+          <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681549004610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"order\">\r\n+          <el-menu-item index=\"index\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681549023917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"index\">\r\n+          <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681549323401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n \r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n+            <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n"
+                },
+                {
+                    "date": 1681549333023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n-            <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n+            <el-menu-item index=\"ProductList\">订单列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n"
+                },
+                {
+                    "date": 1681549351979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \r\n           <el-menu-item index=\"order\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n-            <el-menu-item index=\"ProductList\">订单列表</el-menu-item>\r\n+            <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n"
+                },
+                {
+                    "date": 1681549433160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,12 @@\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n+            <template>\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n+          </template>\r\n             <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"user\">\r\n"
+                },
+                {
+                    "date": 1681549442732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n           <el-menu-item index=\"order\">\r\n             <template>\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n-          </template>\r\n+             </template>\r\n             <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"user\">\r\n"
+                },
+                {
+                    "date": 1681549467158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,12 +26,12 @@\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"order\">\r\n-            <template>\r\n+            <template slot=\"title\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n-             </template>\r\n+            </template>\r\n             <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n           <el-menu-item index=\"user\">\r\n"
+                },
+                {
+                    "date": 1681549479972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,15 +25,15 @@\n             <el-menu-item index=\"ProductList\">商品列表</el-menu-item>\r\n             <el-menu-item index=\"ProductAdd\">新增商品</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"order\">\r\n+          <el-submenu index=\"order\">\r\n             <template slot=\"title\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n             </template>\r\n             <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n-          </el-menu-item>\r\n+          </el-submenu>\r\n \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n"
+                },
+                {
+                    "date": 1681549811082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n+            <el-menu-item index=\"OrderList\">订单列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n"
+                }
+            ],
+            "date": 1681525027587,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div class=\"mall-admin-system\">\r\n    <!-- 顶部导航栏 -->\r\n    <el-header height=\"80px\">\r\n      <div class=\"logo\"></div>\r\n      <div class=\"user-info\">{{userInfo.username}}</div>\r\n      <div class=\"logout\">\r\n        <el-button type=\"primary\" @click=\"logout\">退出登录</el-button>\r\n      </div>\r\n    </el-header>\r\n\r\n    <!-- 页面布局 -->\r\n    <el-container style=\"height: calc(100vh - 80px);\">\r\n      <!-- 侧边栏 -->\r\n      <el-aside width=\"200px\">\r\n        <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n          <el-submenu index=\"product\">\r\n            <template slot=\"title\">\r\n              <i class=\"el-icon-goods\"></i>\r\n              <span>商品管理</span>\r\n            </template>\r\n            <el-menu-item index=\"product-list\">商品列表</el-menu-item>\r\n            <el-menu-item index=\"product-add\">新增商品</el-menu-item>\r\n          </el-submenu>\r\n          <el-menu-item index=\"order\">\r\n            <i class=\"el-icon-s-order\"></i>\r\n            <span>订单管理</span>\r\n          </el-menu-item>\r\n          <el-menu-item index=\"user\">\r\n            <i class=\"el-icon-user\"></i>\r\n            <span>用户管理</span>\r\n          </el-menu-item>\r\n        </el-menu>\r\n      </el-aside>\r\n\r\n      <!-- 主体区域 -->\r\n      <el-main>\r\n        <!-- <router-view></router-view> -->\r\n        这是一个内容块的测试\r\n      </el-main>\r\n    </el-container>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'Success',\r\n  data() {\r\n    return {\r\n      activeMenu: 'product-list',//激活的菜单项\r\n      userInfo: {\r\n        username: '{{this.loogn.form.username}}'\r\n      }\r\n    }\r\n  },\r\n  methods: {\r\n    handleSelect(index) {\r\n      this.activeMenu = index\r\n      this.$router.push('/' + index)\r\n    },\r\n    logout() {\r\n    // 清除本地存储的isLoggedIn信息并跳转到登录页面\r\n    localStorage.removeItem('isLoggedIn')\r\n    this.$router.push({ path: '/' })\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style>\r\n.mall-admin-system {\r\n  height: 100vh;\r\n}\r\n\r\n.el-header{\r\n  background-color: darkgray;\r\n}\r\n.el-main{\r\n  background-color: rgb(211, 204, 193);\r\n}\r\n\r\n\r\n.logo {\r\n  width: 120px;\r\n  height: 80px;\r\n  background-image: url(../assets/logo.png);\r\n  background-size: contain;\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  float: left;\r\n  margin-right: 20px;\r\n}\r\n\r\n.user-info {\r\n  float: left;\r\n  margin-right: 10px;\r\n  line-height: 80px;\r\n}\r\n\r\n.logout {\r\n  float: right;\r\n  line-height: 80px;\r\n}\r\n\r\n.el-aside {\r\n  border-right: 1px solid #e6e6e6;\r\n}\r\n\r\n.el-menu-vertical-demo {\r\n  width: 100%;\r\n  margin-top: 20px;\r\n}\r\n</style>"
+        }
+    ]
+}

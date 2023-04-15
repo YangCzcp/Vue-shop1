@@ -1,0 +1,22 @@
+{
+    "sourceFile": "shop/vue.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1681480162656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681480169659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,13 @@\n     // open:true,//项目启动自动打开浏览器\n     // proxy:'http://127.0.0.1:3000' //代理\n     proxy:{\n       //api 代理 本地接口\n-      '/api':{\n-        target:'http://127.0.0.1:3000',\n-        ws:true,//是否开启websockt\n-        changeOrigin:true, //\n-        pathReWrite:{'^/api':''}\n-      },\n+      // '/api':{\n+      //   target:'http://127.0.0.1:3000',\n+      //   ws:true,//是否开启websockt\n+      //   changeOrigin:true, //\n+      //   pathReWrite:{'^/api':''}\n+      // },\n     }\n   }\n })\n"
+                }
+            ],
+            "date": 1681480162656,
+            "name": "Commit-0",
+            "content": "const { defineConfig } = require('@vue/cli-service')\nmodule.exports = defineConfig({\n  transpileDependencies: true,\n  lintOnSave:false,  // 关闭eslint语法校验\n  devServer:{\n    host:'127.0.0.1',\n    port:8080,\n    // open:true,//项目启动自动打开浏览器\n    // proxy:'http://127.0.0.1:3000' //代理\n    proxy:{\n      //api 代理 本地接口\n      '/api':{\n        target:'http://127.0.0.1:3000',\n        ws:true,//是否开启websockt\n        changeOrigin:true, //\n        pathReWrite:{'^/api':''}\n      },\n    }\n  }\n})\n"
+        }
+    ]
+}

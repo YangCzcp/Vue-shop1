@@ -9,7 +9,7 @@
       </el-form-item> 
   
    <el-form-item> 
-      <el-button type="primary" @click="login">登录</el-button>
+    <el-button type="primary" @click="login" v-loading="loading" v-bind:disabled="loading">登录</el-button>
       <el-button @click="resetForm('form')">重置</el-button> 
     </el-form-item>
   
@@ -22,12 +22,13 @@
     name:"Login" ,
         data() { 
           return { 
+            loading: false,
             form: { 
-              username: '',
+              username: 'admin',//显示 测试
               password: '' 
             }, 
         rules: { 
-          username: [ 
+          username: [
             { required: true, message: '请输入用户名', trigger: 'blur' },
             {pattern: /^[^\u4e00-\u9fa5]+$/, message: '用户名不能包含中文', trigger: 'blur' }
           ],
@@ -36,26 +37,34 @@
             { min: 6, max: 20, message: '密码长度应为6~20位', trigger: 'blur' } 
               ] 
             }, 
-            defaultUsername: 'admin', 
-            defaultPassword: '123456' 
+            defaultUsername: 'admin', //默认用户名
+            defaultPassword: '123456' //默认密码
             } 
           }, 
         methods: { 
           login() { // 登录事件处理器
             if (!this.form.username || !this.form.password) {
+            
       this.$message.error('请输入用户名和密码');//未输入用户名跟密码
     } else if (
       this.form.username === this.defaultUsername &&
       this.form.password === this.defaultPassword
     ) {
+
+      this.loading = true;
       localStorage.setItem('isLoggedIn', this.form.username);//本地存储
       // localStorage.setItem('token',this.form.password)
-      this.$router.push('/success'); //跳转
+
+    setTimeout(() => {
+      this.$router.push("/success");
       this.$message({
-            message: '登录成功 ,欢迎你',
-            type: 'success',
-            // duration:2000
-          })
+        message: "登录成功 ,欢迎你",
+        type: "success",
+      });
+      // Reset the loading state to false once done
+      this.loading = false;
+    }, 2000);
+         
     } else {
       this.$message.error('用户名或密码错误');
     }

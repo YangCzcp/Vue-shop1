@@ -1,0 +1,46 @@
+{
+    "sourceFile": "shop/src/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1681542015941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681542053477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n // import './styles/index.less'\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n \n-import Router from 'vue-router'\n \n const originalPush = Router.prototype.push\n Router.prototype.push = function push(location) {\n \treturn originalPush.call(this, location).catch(err => err)\n"
+                },
+                {
+                    "date": 1681542084762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n // import './styles/index.less'\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n \n+import Router from 'vue-router'\n \n const originalPush = Router.prototype.push\n Router.prototype.push = function push(location) {\n \treturn originalPush.call(this, location).catch(err => err)\n"
+                },
+                {
+                    "date": 1681542090097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,8 @@\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n \n import Router from 'vue-router'\n-\n const originalPush = Router.prototype.push\n Router.prototype.push = function push(location) {\n \treturn originalPush.call(this, location).catch(err => err)\n }\n"
+                },
+                {
+                    "date": 1681542113965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n // import './styles/index.less'\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n \n-import Router from 'vue-router'\n-const originalPush = Router.prototype.push\n-Router.prototype.push = function push(location) {\n-\treturn originalPush.call(this, location).catch(err => err)\n-}\n+// import Router from 'vue-router'\n+// const originalPush = Router.prototype.push\n+// Router.prototype.push = function push(location) {\n+// \treturn originalPush.call(this, location).catch(err => err)\n+// }\n \n Vue.config.productionTip = false  // 关闭生产环境提示\n \n Vue.use(ElementUI);\n"
+                },
+                {
+                    "date": 1681542121170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n // import './styles/index.less'\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n \n-// import Router from 'vue-router'\n-// const originalPush = Router.prototype.push\n-// Router.prototype.push = function push(location) {\n-// \treturn originalPush.call(this, location).catch(err => err)\n-// }\n+import Router from 'vue-router'\n+const originalPush = Router.prototype.push\n+Router.prototype.push = function push(location) {\n+\treturn originalPush.call(this, location).catch(err => err)\n+}\n \n Vue.config.productionTip = false  // 关闭生产环境提示\n \n Vue.use(ElementUI);\n"
+                },
+                {
+                    "date": 1681542778939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import 'element-ui/lib/theme-chalk/index.css';\n // import './styles/index.less'\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n-\n+//异常捕获的方式来解决 Vue Router 中的错误。\n import Router from 'vue-router'\n const originalPush = Router.prototype.push\n Router.prototype.push = function push(location) {\n \treturn originalPush.call(this, location).catch(err => err)\n"
+                },
+                {
+                    "date": 1681542893528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n import 'element-ui/lib/theme-chalk/index.css';\n // import './styles/index.less'\n import * as echarts from 'echarts'\n Vue.prototype.$echarts = echarts\n-//异常捕获的方式来解决 Vue Router 中的错误。\n+\n+//异常捕获的方式来解决 Vue Router 中的错误。 不推荐\n import Router from 'vue-router'\n const originalPush = Router.prototype.push\n Router.prototype.push = function push(location) {\n \treturn originalPush.call(this, location).catch(err => err)\n"
+                }
+            ],
+            "date": 1681542015941,
+            "name": "Commit-0",
+            "content": "// 导入 Vue.js、Vue-router、Element-UI、Axios 和 Vuex\nimport Vue from 'vue'\nimport App from './App.vue'\nimport router from './router'\nimport store from './store'\nimport Vuex from 'vuex'\nimport ElementUI from 'element-ui'\nimport 'element-ui/lib/theme-chalk/index.css';\n// import './styles/index.less'\nimport * as echarts from 'echarts'\nVue.prototype.$echarts = echarts\n\nimport Router from 'vue-router'\n\nconst originalPush = Router.prototype.push\nRouter.prototype.push = function push(location) {\n\treturn originalPush.call(this, location).catch(err => err)\n}\n\nVue.config.productionTip = false  // 关闭生产环境提示\n\nVue.use(ElementUI);\nVue.use(Vuex)\nnew Vue({\n  // 在vue原型上添加了属性：$bus\n  // beforeCreate(){\n  //   Vue.prototype.$bus = this\n  // },\n  router,\n  store,\n  render: h => h(App),\n}).$mount('#app')\n"
+        }
+    ]
+}

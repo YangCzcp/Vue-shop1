@@ -10,6 +10,14 @@ import 'element-ui/lib/theme-chalk/index.css';
 import * as echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 
+//异常捕获的方式来解决 Vue Router 中的错误。 不推荐
+import Router from 'vue-router'
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+	return originalPush.call(this, location).catch(err => err)
+}
+
+
 Vue.config.productionTip = false  // 关闭生产环境提示
 
 Vue.use(ElementUI);

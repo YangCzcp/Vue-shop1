@@ -1,4 +1,4 @@
-# hello-world
+# shop
 
 ## Project setup
 ```
