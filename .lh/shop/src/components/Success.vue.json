@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 61,
+            "activePatchIndex": 82,
             "patches": [
                 {
                     "date": 1681525027587,
@@ -252,6 +252,90 @@
                 {
                     "date": 1681549811082,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-s-order\"></i>\r\n             <span>订单管理</span>\r\n             </template>\r\n-            <el-menu-item index=\"orderList\">订单列表</el-menu-item>\r\n+            <el-menu-item index=\"OrderList\">订单列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n"
+                },
+                {
+                    "date": 1681562342148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <el-container style=\"height: calc(100vh - 80px);\">\r\n \r\n \r\n       <!-- 侧边栏 -->\r\n-      <el-aside width=\"200px\">\r\n+      <el-aside :width=\"isCollapse ? '64px' : '200px'\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n           <!-- 二级菜单 -->\r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n"
+                },
+                {
+                    "date": 1681562403246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,18 @@\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n-      }\r\n+      },\r\n+      iconsObj: {\r\n+        '125': 'iconfont icon-user',\r\n+        '103': 'iconfont icon-tijikongjian',\r\n+        '101': 'iconfont icon-shangpin',\r\n+        '102': 'iconfont icon-danju',\r\n+        '145': 'iconfont icon-baobiao'\r\n+      },\r\n+      // 是否折叠\r\n+\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562448935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <el-container style=\"height: calc(100vh - 80px);\">\r\n \r\n \r\n       <!-- 侧边栏 -->\r\n-      <el-aside :width=\"isCollapse ? '64px' : '200px'\">\r\n+      <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n           <!-- 二级菜单 -->\r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n@@ -65,18 +65,9 @@\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n-      },\r\n-      iconsObj: {\r\n-        '125': 'iconfont icon-user',\r\n-        '103': 'iconfont icon-tijikongjian',\r\n-        '101': 'iconfont icon-shangpin',\r\n-        '102': 'iconfont icon-danju',\r\n-        '145': 'iconfont icon-baobiao'\r\n-      },\r\n-      // 是否折叠\r\n-\r\n+      }\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562500837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,11 @@\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n-      }\r\n+      },\r\n+      // 是否折叠\r\n+      isCollapse: false,\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562521164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n       userInfo: {\r\n         username: 'admin'\r\n       },\r\n       // 是否折叠\r\n-      isCollapse: false,\r\n+      isCollapse: true,\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562590057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <el-container style=\"height: calc(100vh - 80px);\">\r\n \r\n \r\n       <!-- 侧边栏 -->\r\n-      <el-aside width=\"200px\">\r\n+      <el-aside :width=\"isCollapse ? '64px' : '200px'\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n           <!-- 二级菜单 -->\r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n"
+                },
+                {
+                    "date": 1681562611105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n       userInfo: {\r\n         username: 'admin'\r\n       },\r\n       // 是否折叠\r\n-      isCollapse: true,\r\n+      isCollapse: flase,\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562619257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,10 +66,8 @@\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       },\r\n-      // 是否折叠\r\n-      isCollapse: flase,\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562635791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <el-container style=\"height: calc(100vh - 80px);\">\r\n \r\n \r\n       <!-- 侧边栏 -->\r\n-      <el-aside :width=\"isCollapse ? '64px' : '200px'\">\r\n+      <el-aside width=\"200px\">\r\n         <el-menu :default-active=\"activeMenu\" class=\"el-menu-vertical-demo\" @select=\"handleSelect\">\r\n           <!-- 二级菜单 -->\r\n           <el-submenu index=\"product\">\r\n             <template slot=\"title\">\r\n@@ -66,8 +66,10 @@\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       },\r\n+      // 是否折叠\r\n+      isCollapse: true,\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562645725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,10 +66,8 @@\n       activeMenu: 'ProductList',//激活的菜单项\r\n       userInfo: {\r\n         username: 'admin'\r\n       },\r\n-      // 是否折叠\r\n-      isCollapse: true,\r\n     }\r\n   },\r\n   methods: {\r\n     handleSelect(index) {\r\n"
+                },
+                {
+                    "date": 1681562828354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </el-menu-item>\r\n \r\n-          <el-menu-item index=\"data-analysis\">\r\n+          <el-menu-item index=\"analysis\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681563730334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,12 +33,12 @@\n             </template>\r\n             <el-menu-item index=\"OrderList\">订单列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"user\">\r\n+          <el-submenu index=\"user\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n-          </el-menu-item>\r\n+          </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n"
+                },
+                {
+                    "date": 1681563752498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,10 +34,12 @@\n             <el-menu-item index=\"OrderList\">订单列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-submenu index=\"user\">\r\n+            <template slot=\"title\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n+          </template>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n"
+                },
+                {
+                    "date": 1681563768046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </template>\r\n+          <el-menu-item index=\"OrderList\">订单列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n"
+                },
+                {
+                    "date": 1681563784733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </template>\r\n-          <el-menu-item index=\"OrderList\">订单列表</el-menu-item>\r\n+          <el-menu-item index=\"UserList\">订单列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n"
+                },
+                {
+                    "date": 1681563792702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-user\"></i>\r\n             <span>用户管理</span>\r\n           </template>\r\n-          <el-menu-item index=\"UserList\">订单列表</el-menu-item>\r\n+          <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n"
+                },
+                {
+                    "date": 1681563844860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n           <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n+            <template slot=\"title\"></template>\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </el-menu-item>\r\n \r\n"
+                },
+                {
+                    "date": 1681563856261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,11 +42,13 @@\n           <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n           <el-menu-item index=\"analysis\">\r\n-            <template slot=\"title\"></template>\r\n+            <template slot=\"title\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n+          </template>\r\n+          <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n         </el-menu>\r\n       </el-aside>\r\n"
+                },
+                {
+                    "date": 1681563867200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </template>\r\n-          <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n+          <el-menu-item index=\"UserList\">数据列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n         </el-menu>\r\n       </el-aside>\r\n"
+                },
+                {
+                    "date": 1681563878708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             <template slot=\"title\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </template>\r\n-          <el-menu-item index=\"UserList\">数据列表</el-menu-item>\r\n+          <el-menu-item index=\"AnalysisList\">数据列表</el-menu-item>\r\n           </el-menu-item>\r\n \r\n         </el-menu>\r\n       </el-aside>\r\n"
+                },
+                {
+                    "date": 1681563964786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,15 +41,15 @@\n           </template>\r\n           <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"analysis\">\r\n+          <el-submenu index=\"analysis\">\r\n             <template slot=\"title\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </template>\r\n           <el-menu-item index=\"AnalysisList\">数据列表</el-menu-item>\r\n-          </el-menu-item>\r\n+          </el-submenu>\r\n \r\n         </el-menu>\r\n       </el-aside>\r\n \r\n"
                 }
             ],
             "date": 1681525027587,

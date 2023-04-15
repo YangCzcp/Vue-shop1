@@ -5,6 +5,8 @@ import Success from '@/components/Success.vue'
 import ProductList from '@/view/Product/ProductList'
 import ProductAdd from '@/view/Product/ProductAdd'
 import OrderList from  '@/view/Order/OrderList'
+import AnalysisList from '@/view/Analysis/AnalysisList'
+import UserList from '@/view/User/UserList'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
         path:'/OrderList',
         name:'OrderList',
         component:OrderList
+      },
+      {
+        path:'/AnalysisList',
+        name:'AnalysisList',
+        component:AnalysisList
+      },
+      {
+        path:'/UserList',
+        name:'UserList',
+        component:UserList
       }
     ],
     meta: { requiresAuth: true } //身份验证

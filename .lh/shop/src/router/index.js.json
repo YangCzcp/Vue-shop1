@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 109,
+            "activePatchIndex": 114,
             "patches": [
                 {
                     "date": 1681528484066,
@@ -444,6 +444,26 @@
                 {
                     "date": 1681549852202,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,11 @@\n         name:'ProductAdd',\r\n         component:ProductAdd\r\n       },\r\n       {\r\n-        path:'/ProductAdd',\r\n-        name:'ProductAdd',\r\n-        component:ProductAdd\r\n+        path:'/OrderList',\r\n+        name:'OrderList',\r\n+        component:OrderList\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n"
+                },
+                {
+                    "date": 1681565149922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import Success from '@/components/Success.vue'\r\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n import OrderList from  '@/view/Order/OrderList'\r\n+import AnalysisList from '@/view/Analysis/AnalysisList'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681565182503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import ProductList from '@/view/Product/ProductList'\r\n import ProductAdd from '@/view/Product/ProductAdd'\r\n import OrderList from  '@/view/Order/OrderList'\r\n import AnalysisList from '@/view/Analysis/AnalysisList'\r\n+import UserList from '@/view/User/UserList'\r\n \r\n Vue.use(VueRouter)\r\n \r\n const routes = [\r\n"
+                },
+                {
+                    "date": 1681565195994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,18 @@\n       {\r\n         path:'/OrderList',\r\n         name:'OrderList',\r\n         component:OrderList\r\n+      },\r\n+      {\r\n+        path:'/OrderList',\r\n+        name:'OrderList',\r\n+        component:OrderList\r\n+      },\r\n+      {\r\n+        path:'/OrderList',\r\n+        name:'OrderList',\r\n+        component:OrderList\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n"
+                },
+                {
+                    "date": 1681565215842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,11 +41,11 @@\n         name:'OrderList',\r\n         component:OrderList\r\n       },\r\n       {\r\n-        path:'/OrderList',\r\n-        name:'OrderList',\r\n-        component:OrderList\r\n+        path:'/UserList',\r\n+        name:'UserList',\r\n+        component:UserList\r\n       }\r\n     ],\r\n     meta: { requiresAuth: true } //身份验证\r\n   },\r\n"
+                },
+                {
+                    "date": 1681565232550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n         name:'OrderList',\r\n         component:OrderList\r\n       },\r\n       {\r\n-        path:'/OrderList',\r\n-        name:'OrderList',\r\n-        component:OrderList\r\n+        path:'/AnalysisList',\r\n+        name:'AnalysisList',\r\n+        component:AnalysisList\r\n       },\r\n       {\r\n         path:'/UserList',\r\n         name:'UserList',\r\n"
                 }
             ],
             "date": 1681528484066,

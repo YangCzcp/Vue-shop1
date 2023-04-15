@@ -34,15 +34,21 @@
             <el-menu-item index="OrderList">订单列表</el-menu-item>
           </el-submenu>
 
-          <el-menu-item index="user">
+          <el-submenu index="user">
+            <template slot="title">
             <i class="el-icon-user"></i>
             <span>用户管理</span>
-          </el-menu-item>
+          </template>
+          <el-menu-item index="UserList">用户列表</el-menu-item>
+          </el-submenu>
 
-          <el-menu-item index="data-analysis">
+          <el-submenu index="analysis">
+            <template slot="title">
             <i class="el-icon-data-analysis"></i>
             <span>数据统计</span>
-          </el-menu-item>
+          </template>
+          <el-menu-item index="AnalysisList">数据列表</el-menu-item>
+          </el-submenu>
 
         </el-menu>
       </el-aside>
@@ -66,7 +72,7 @@ export default {
       activeMenu: 'ProductList',//激活的菜单项
       userInfo: {
         username: 'admin'
-      }
+      },
     }
   },
   methods: {
