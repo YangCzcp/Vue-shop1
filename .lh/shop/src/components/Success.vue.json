@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 82,
+            "activePatchIndex": 88,
             "patches": [
                 {
                     "date": 1681525027587,
@@ -336,6 +336,30 @@
                 {
                     "date": 1681563964786,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,15 +41,15 @@\n           </template>\r\n           <el-menu-item index=\"UserList\">用户列表</el-menu-item>\r\n           </el-submenu>\r\n \r\n-          <el-menu-item index=\"analysis\">\r\n+          <el-submenu index=\"analysis\">\r\n             <template slot=\"title\">\r\n             <i class=\"el-icon-data-analysis\"></i>\r\n             <span>数据统计</span>\r\n           </template>\r\n           <el-menu-item index=\"AnalysisList\">数据列表</el-menu-item>\r\n-          </el-menu-item>\r\n+          </el-submenu>\r\n \r\n         </el-menu>\r\n       </el-aside>\r\n \r\n"
+                },
+                {
+                    "date": 1681631549324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n .el-header{\r\n   background-color: darkgray;\r\n }\r\n .el-main{\r\n-  background-color: rgb(211, 204, 193);\r\n+  background-color: rgb(11, 8, 2);\r\n }\r\n \r\n \r\n .logo {\r\n"
+                },
+                {
+                    "date": 1681631558077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n .el-header{\r\n   background-color: darkgray;\r\n }\r\n .el-main{\r\n-  background-color: rgb(11, 8, 2);\r\n+  background-color: rgb(211, 204, 193);\r\n }\r\n \r\n \r\n .logo {\r\n"
+                },
+                {
+                    "date": 1681631565794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n   height: 100vh;\r\n }\r\n \r\n .el-header{\r\n-  background-color: darkgray;\r\n+  background-color: rgb(24, 19, 19);\r\n }\r\n .el-main{\r\n   background-color: rgb(211, 204, 193);\r\n }\r\n"
+                },
+                {
+                    "date": 1681631573043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n   height: 100vh;\r\n }\r\n \r\n .el-header{\r\n-  background-color: rgb(24, 19, 19);\r\n+  background-color: darkgray;\r\n }\r\n .el-main{\r\n   background-color: rgb(211, 204, 193);\r\n }\r\n"
+                },
+                {
+                    "date": 1681631607219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,7 +129,8 @@\n }\r\n \r\n .el-menu-vertical-demo {\r\n   width: 100%;\r\n+  background-color: #fff;\r\n   margin-top: 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681631622453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,8 +129,7 @@\n }\r\n \r\n .el-menu-vertical-demo {\r\n   width: 100%;\r\n-  background-color: #fff;\r\n   margin-top: 20px;\r\n }\r\n </style>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1681525027587,

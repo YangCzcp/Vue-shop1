@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 101,
             "patches": [
                 {
                     "date": 1681526529078,
@@ -68,6 +68,350 @@
                 {
                     "date": 1681539161905,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n     <div>\r\n-      <h1>Product List</h1>\r\n+      <h1>这是个商品列表</h1>\r\n     </div>\r\n   </template>\r\n \r\n <script>\r\n"
+                },
+                {
+                    "date": 1681630359549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,37 @@\n <template>\r\n-    <div>\r\n-      <h1>这是个商品列表</h1>\r\n-    </div>\r\n-  </template>\r\n-\r\n+  <div>\r\n+    <!-- 面包屑导航区域 -->\r\n+    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n+      <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n+    </el-breadcrumb>\r\n+ \r\n+    <!-- 卡片视图区域 -->\r\n+    <el-card>\r\n+      <el-row :gutter=\"20\">\r\n+        <el-col :span=\"8\">\r\n+          <el-input placeholder=\"请输入内容\" v-model=\"queryInfo.query\" clearable @clear=\"getGoodsList\">\r\n+            <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"getGoodsList\"></el-button>\r\n+          </el-input>\r\n+        </el-col>\r\n+        <el-col :span=\"4\">\r\n+          <el-button type=\"primary\" @click=\"goAddpage\">添加商品</el-button>\r\n+        </el-col>\r\n+      </el-row>\r\n+ \r\n+     \r\n+ \r\n+      <!-- 分页区域 -->\r\n+      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      </el-pagination>\r\n+    </el-card>\r\n+  </div>\r\n+</template>\r\n+ \r\n <script>\r\n \r\n </script>\r\n-<style>\r\n-\r\n+ \r\n+<style lang=\"less\" scoped>\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681630732248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,19 +7,9 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-    <el-card>\r\n-      <el-row :gutter=\"20\">\r\n-        <el-col :span=\"8\">\r\n-          <el-input placeholder=\"请输入内容\" v-model=\"queryInfo.query\" clearable @clear=\"getGoodsList\">\r\n-            <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"getGoodsList\"></el-button>\r\n-          </el-input>\r\n-        </el-col>\r\n-        <el-col :span=\"4\">\r\n-          <el-button type=\"primary\" @click=\"goAddpage\">添加商品</el-button>\r\n-        </el-col>\r\n-      </el-row>\r\n+  \r\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n"
+                },
+                {
+                    "date": 1681630742087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-  \r\n+    <el-card>\r\n+    \r\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n"
+                },
+                {
+                    "date": 1681630747290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,9 @@\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n-      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n-      </el-pagination>\r\n-    </el-card>\r\n+      <\r\n   </div>\r\n </template>\r\n  \r\n <script>\r\n"
+                },
+                {
+                    "date": 1681630753340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,15 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-    <el-card>\r\n+   \r\n     \r\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n-      <\r\n+      \r\n   </div>\r\n </template>\r\n  \r\n <script>\r\n"
+                },
+                {
+                    "date": 1681630907774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n-    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n+    <el-breadcrumb>\r\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n"
+                },
+                {
+                    "date": 1681630969747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n <template>\r\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n-    <el-breadcrumb>\r\n-      <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n-    </el-breadcrumb>\r\n+    <el-breadcrumb separator=\"/\">\r\n+  <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n+  <el-breadcrumb-item><a href=\"/\">活动管理</a></el-breadcrumb-item>\r\n+  <el-breadcrumb-item>活动列表</el-breadcrumb-item>\r\n+  <el-breadcrumb-item>活动详情</el-breadcrumb-item>\r\n+</el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1681630979281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n <template>\r\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator=\"/\">\r\n-  <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n-  <el-breadcrumb-item><a href=\"/\">活动管理</a></el-breadcrumb-item>\r\n-  <el-breadcrumb-item>活动列表</el-breadcrumb-item>\r\n-  <el-breadcrumb-item>活动详情</el-breadcrumb-item>\r\n-</el-breadcrumb>\r\n+      <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n+      <el-breadcrumb-item><a href=\"/\">活动管理</a></el-breadcrumb-item>\r\n+      <el-breadcrumb-item>活动列表</el-breadcrumb-item>\r\n+      <el-breadcrumb-item>活动详情</el-breadcrumb-item>\r\n+    </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1681631000268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,10 @@\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator=\"/\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item><a href=\"/\">活动管理</a></el-breadcrumb-item>\r\n-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>\r\n+      <el-breadcrumb-item><a href=\"/\">商品管理</a></el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n    \r\n"
+                },
+                {
+                    "date": 1681631073104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n-    <el-breadcrumb separator=\"/\">\r\n+    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item><a href=\"/\">商品管理</a></el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n"
+                },
+                {
+                    "date": 1681631159433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item><a href=\"/\">商品管理</a></el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n"
+                },
+                {
+                    "date": 1681631183011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n-    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n+    <el-breadcrumb separator-class=\"el-icon-arrow-right\" class=\"icon\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n"
+                },
+                {
+                    "date": 1681631262017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,6 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n+\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681631267781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,8 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n-\r\n+.iocn{\r\n+  \r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681631288394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,8 @@\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n .iocn{\r\n-  \r\n+  font-size: 20px;\r\n+  color: black;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681631362139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,6 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n-.iocn{\r\n-  font-size: 20px;\r\n-  color: black;\r\n-}\r\n+\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681631368077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n-    <el-breadcrumb separator-class=\"el-icon-arrow-right\" class=\"icon\">\r\n+    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n"
+                },
+                {
+                    "date": 1681631988545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,12 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-   \r\n+   <el-card>\r\n     \r\n+   </el-card>\r\n+    \r\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n"
+                },
+                {
+                    "date": 1681632014993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,18 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-   <el-card>\r\n+    <el-card class=\"box-card\">\r\n+  <div slot=\"header\" class=\"clearfix\">\r\n+    <span>卡片名称</span>\r\n+    <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n+  </div>\r\n+  <div v-for=\"o in 4\" :key=\"o\" class=\"text item\">\r\n+    {{'列表内容 ' + o }}\r\n+  </div>\r\n+</el-card>\r\n     \r\n-   </el-card>\r\n-    \r\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n"
+                },
+                {
+                    "date": 1681632053868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,6 +30,25 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n+.text {\r\n+    font-size: 14px;\r\n+  }\r\n \r\n+  .item {\r\n+    margin-bottom: 18px;\r\n+  }\r\n+\r\n+  .clearfix:before,\r\n+  .clearfix:after {\r\n+    display: table;\r\n+    content: \"\";\r\n+  }\r\n+  .clearfix:after {\r\n+    clear: both\r\n+  }\r\n+\r\n+  .box-card {\r\n+    width: 480px;\r\n+  }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632063748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,25 +30,6 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n-.text {\r\n-    font-size: 14px;\r\n-  }\r\n \r\n-  .item {\r\n-    margin-bottom: 18px;\r\n-  }\r\n-\r\n-  .clearfix:before,\r\n-  .clearfix:after {\r\n-    display: table;\r\n-    content: \"\";\r\n-  }\r\n-  .clearfix:after {\r\n-    clear: both\r\n-  }\r\n-\r\n-  .box-card {\r\n-    width: 480px;\r\n-  }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632072863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,6 +30,25 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n+.text {\r\n+    font-size: 14px;\r\n+  }\r\n \r\n+  .item {\r\n+    margin-bottom: 18px;\r\n+  }\r\n+\r\n+  .clearfix:before,\r\n+  .clearfix:after {\r\n+    display: table;\r\n+    content: \"\";\r\n+  }\r\n+  .clearfix:after {\r\n+    clear: both\r\n+  }\r\n+\r\n+  .box-card {\r\n+    width: 480px;\r\n+  }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632094658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,6 +49,7 @@\n   }\r\n \r\n   .box-card {\r\n     width: 480px;\r\n+    padding: 10px;\r\n   }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632170715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n   }\r\n \r\n   .box-card {\r\n     width: 480px;\r\n-    padding: 10px;\r\n+    margin: 10px auto;\r\n   }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632177136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,25 +30,9 @@\n \r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n-.text {\r\n-    font-size: 14px;\r\n-  }\r\n \r\n-  .item {\r\n-    margin-bottom: 18px;\r\n-  }\r\n-\r\n-  .clearfix:before,\r\n-  .clearfix:after {\r\n-    display: table;\r\n-    content: \"\";\r\n-  }\r\n-  .clearfix:after {\r\n-    clear: both\r\n-  }\r\n-\r\n   .box-card {\r\n     width: 480px;\r\n     margin: 10px auto;\r\n   }\r\n"
+                },
+                {
+                    "date": 1681632189188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n \r\n-  .box-card {\r\n-    width: 480px;\r\n-    margin: 10px auto;\r\n-  }\r\n+  // .box-card {\r\n+  //   width: 480px;\r\n+  //   margin: 10px auto;\r\n+  // }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632196214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n \r\n-  // .box-card {\r\n-  //   width: 480px;\r\n-  //   margin: 10px auto;\r\n-  // }\r\n+  .box-card {\r\n+    // width: 480px;\r\n+    margin: 10px auto;\r\n+  }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632218414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n <style lang=\"less\" scoped>\r\n \r\n   .box-card {\r\n     // width: 480px;\r\n-    margin: 10px auto;\r\n+    margin: 15px auto;\r\n   }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681632243284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n   <div slot=\"header\" class=\"clearfix\">\r\n-    <span>卡片名称</span>\r\n+    <span>商品类别分类</span>\r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n   <div v-for=\"o in 4\" :key=\"o\" class=\"text item\">\r\n     {{'列表内容 ' + o }}\r\n"
+                },
+                {
+                    "date": 1681632270892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   <div slot=\"header\" class=\"clearfix\">\r\n     <span>商品类别分类</span>\r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n-  <div v-for=\"o in 4\" :key=\"o\" class=\"text item\">\r\n+  <div v-for=\"o in 80\" :key=\"o\" class=\"text item\">\r\n     {{'列表内容 ' + o }}\r\n   </div>\r\n </el-card>\r\n     \r\n"
+                },
+                {
+                    "date": 1681632284709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   <div slot=\"header\" class=\"clearfix\">\r\n     <span>商品类别分类</span>\r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n-  <div v-for=\"o in 80\" :key=\"o\" class=\"text item\">\r\n+  <div v-for=\"o in 60\" :key=\"o\" class=\"text item\">\r\n     {{'列表内容 ' + o }}\r\n   </div>\r\n </el-card>\r\n     \r\n"
+                },
+                {
+                    "date": 1681632298991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n   <div slot=\"header\" class=\"clearfix\">\r\n-    <span>商品类别分类</span>\r\n+    <span>商品列表</span>\r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n   <div v-for=\"o in 60\" :key=\"o\" class=\"text item\">\r\n     {{'列表内容 ' + o }}\r\n"
+                },
+                {
+                    "date": 1681632313979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n   <div slot=\"header\" class=\"clearfix\">\r\n     <span>商品列表</span>\r\n+    <span>商品列表</span>\r\n+\r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n   <div v-for=\"o in 60\" :key=\"o\" class=\"text item\">\r\n     {{'列表内容 ' + o }}\r\n"
+                },
+                {
+                    "date": 1681632390766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n   <div slot=\"header\" class=\"clearfix\">\r\n-    <span>商品列表</span>\r\n-    <span>商品列表</span>\r\n-\r\n+    <span v-for=\"i in 5\" :key=\"i\">\r\n+    {{ '商品列表'+i }}</span>\r\n+    \r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n   <div v-for=\"o in 60\" :key=\"o\" class=\"text item\">\r\n     {{'列表内容 ' + o }}\r\n"
+                },
+                {
+                    "date": 1681632398394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n   <div slot=\"header\" class=\"clearfix\">\r\n     <span v-for=\"i in 5\" :key=\"i\">\r\n-    {{ '商品列表'+i }}</span>\r\n+    {{ '商品列表'+i }} </span>\r\n     \r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n-  <div v-for=\"o in 60\" :key=\"o\" class=\"text item\">\r\n+  <div v-for=\"o in 60\" :key=\"o\">\r\n     {{'列表内容 ' + o }}\r\n   </div>\r\n </el-card>\r\n     \r\n"
+                },
+                {
+                    "date": 1681632413026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n   <div slot=\"header\" class=\"clearfix\">\r\n-    <span v-for=\"i in 5\" :key=\"i\">\r\n+    <span v-for=\"i in 10\" :key=\"i\">\r\n     {{ '商品列表'+i }} </span>\r\n     \r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1681632463606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n+      <el-breadcrumb-item index=\"ProductList\">商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n"
+                },
+                {
+                    "date": 1681632546346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item index=\"ProductList\">商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n+      <el-breadcrumb-item >商品管理</el-breadcrumb-item>\r\n+      <el-breadcrumb-item index=\"ProductList\">商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n@@ -28,9 +28,21 @@\n   </div>\r\n </template>\r\n  \r\n <script>\r\n-\r\n+export default {\r\n+  name: 'Success',\r\n+  data() {\r\n+    return {\r\n+      activeMenu: 'ProductList',//激活的菜单项\r\n+      },\r\n+    }\r\n+  },\r\n+  methods: {\r\n+   \r\n+   \r\n+  }\r\n+}\r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1681632565996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,10 @@\n   name: 'Success',\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n+      userInfo: {\r\n+        username: 'admin'\r\n       },\r\n     }\r\n   },\r\n   methods: {\r\n"
+                },
+                {
+                    "date": 1681632574900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,16 +33,12 @@\n   name: 'Success',\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n-      userInfo: {\r\n-        username: 'admin'\r\n-      },\r\n+     \r\n     }\r\n   },\r\n   methods: {\r\n-   \r\n-   \r\n   }\r\n }\r\n </script>\r\n  \r\n"
+                },
+                {
+                    "date": 1681632594997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n </template>\r\n  \r\n <script>\r\n export default {\r\n-  name: 'Success',\r\n+  name: '',\r\n   data() {\r\n     return {\r\n       activeMenu: 'ProductList',//激活的菜单项\r\n      \r\n"
+                },
+                {
+                    "date": 1681632624614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,8 @@\n export default {\r\n   name: '',\r\n   data() {\r\n     return {\r\n-      activeMenu: 'ProductList',//激活的菜单项\r\n-     \r\n     }\r\n   },\r\n   methods: {\r\n   }\r\n"
+                },
+                {
+                    "date": 1681632630365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item >商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item index=\"ProductList\">商品列表</el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n"
+                },
+                {
+                    "date": 1681632643292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,15 @@\n   <div>\r\n     <!-- 面包屑导航区域 -->\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item >商品管理</el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card class=\"box-card\">\r\n-  <div slot=\"header\" class=\"clearfix\">\r\n+  <div slot=\"header\">\r\n     <span v-for=\"i in 10\" :key=\"i\">\r\n     {{ '商品列表'+i }} </span>\r\n     \r\n     <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n"
+                },
+                {
+                    "date": 1681632730820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,20 +7,48 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-    <el-card class=\"box-card\">\r\n-  <div slot=\"header\">\r\n-    <span v-for=\"i in 10\" :key=\"i\">\r\n-    {{ '商品列表'+i }} </span>\r\n+    <el-card>\r\n+      <el-row :gutter=\"20\">\r\n+        <el-col :span=\"8\">\r\n+          <el-input placeholder=\"请输入内容\" v-model=\"queryInfo.query\" clearable @clear=\"getGoodsList\">\r\n+            <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"getGoodsList\"></el-button>\r\n+          </el-input>\r\n+        </el-col>\r\n+        <el-col :span=\"4\">\r\n+          <el-button type=\"primary\" @click=\"goAddpage\">添加商品</el-button>\r\n+        </el-col>\r\n+      </el-row>\r\n+ \r\n+      <!-- table表格区域 -->\r\n+      <el-table :data=\"goodslist\" border stripe>\r\n+        <el-table-column type=\"index\"></el-table-column>\r\n+        <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n+        <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n+        <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n+        <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n+          <template slot-scope=\"scope\">\r\n+            {{scope.row.add_time | dateFormat}}\r\n+          </template>\r\n+        </el-table-column>\r\n+        <el-table-column label=\"操作\" width=\"130px\">\r\n+          <template slot-scope=\"scope\">\r\n+            <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n+            <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" @click=\"removeById(scope.row.goods_id)\"></el-button>\r\n+          </template>\r\n+        </el-table-column>\r\n+      </el-table>\r\n+ \r\n+      <!-- 分页区域 -->\r\n+      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      </el-pagination>\r\n+    </el-card>\r\n+\r\n+————————————————\r\n+版权声明：本文为CSDN博主「晓宜」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n+原文链接：https://blog.csdn.net/qq_51118755/article/details/127483766\r\n     \r\n-    <el-button style=\"float: right; padding: 3px 0\" type=\"text\">操作按钮</el-button>\r\n-  </div>\r\n-  <div v-for=\"o in 60\" :key=\"o\">\r\n-    {{'列表内容 ' + o }}\r\n-  </div>\r\n-</el-card>\r\n-    \r\n  \r\n      \r\n  \r\n       <!-- 分页区域 -->\r\n"
+                },
+                {
+                    "date": 1681632737544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,15 +42,11 @@\n       <!-- 分页区域 -->\r\n       <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n       </el-pagination>\r\n     </el-card>\r\n-\r\n-————————————————\r\n-版权声明：本文为CSDN博主「晓宜」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n-原文链接：https://blog.csdn.net/qq_51118755/article/details/127483766\r\n     \r\n  \r\n-     \r\n+\r\n  \r\n       <!-- 分页区域 -->\r\n       \r\n   </div>\r\n"
+                },
+                {
+                    "date": 1681632775733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table :data=\"goodslist\" border stripe>\r\n+      <!-- <el-table :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n@@ -36,13 +36,10 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" @click=\"removeById(scope.row.goods_id)\"></el-button>\r\n           </template>\r\n         </el-table-column>\r\n-      </el-table>\r\n- \r\n-      <!-- 分页区域 -->\r\n-      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n-      </el-pagination>\r\n+      </el-table> -->\r\n+\r\n     </el-card>\r\n     \r\n  \r\n \r\n"
+                },
+                {
+                    "date": 1681632842050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,16 +49,83 @@\n   </div>\r\n </template>\r\n  \r\n <script>\r\n+\r\n export default {\r\n-  name: '',\r\n   data() {\r\n     return {\r\n+      // 查询参数对象\r\n+      queryInfo: {\r\n+        query: '',\r\n+        pagenum: 1,\r\n+        pagesize: 10\r\n+      },\r\n+      // 商品列表\r\n+      goodslist: [],\r\n+      // 总数据条数\r\n+      total: 0\r\n     }\r\n   },\r\n+  created() {\r\n+    this.getGoodsList()\r\n+  },\r\n   methods: {\r\n+    // 根据分页获取对应的商品列表\r\n+    async getGoodsList() {\r\n+      const { data: res } = await this.$http.get('goods', {\r\n+        params: this.queryInfo\r\n+      })\r\n+ \r\n+      if (res.meta.status !== 200) {\r\n+        return this.$message.error('获取商品列表失败！')\r\n+      }\r\n+ \r\n+      this.$message.success('获取商品列表成功！')\r\n+      console.log(res.data)\r\n+      this.goodslist = res.data.goods\r\n+      this.total = res.data.total\r\n+    },\r\n+    handleSizeChange(newSize) {\r\n+      this.queryInfo.pagesize = newSize\r\n+      this.getGoodsList()\r\n+    },\r\n+    handleCurrentChange(newPage) {\r\n+      this.queryInfo.pagenum = newPage\r\n+      this.getGoodsList()\r\n+    },\r\n+    async removeById(id) {\r\n+      const confirmResult = await this.$confirm(\r\n+        '此操作将永久删除该商品, 是否继续?',\r\n+        '提示',\r\n+        {\r\n+          confirmButtonText: '确定',\r\n+          cancelButtonText: '取消',\r\n+          type: 'warning'\r\n+        }\r\n+      ).catch(err => err)\r\n+ \r\n+      if (confirmResult !== 'confirm') {\r\n+        return this.$message.info('已经取消删除！')\r\n+      }\r\n+ \r\n+      const { data: res } = await this.$http.delete(`goods/${id}`)\r\n+ \r\n+      if (res.meta.status !== 200) {\r\n+        return this.$message.error('删除失败！')\r\n+      }\r\n+ \r\n+      this.$message.success('删除成功！')\r\n+      this.getGoodsList()\r\n+    },\r\n+    goAddpage() {\r\n+      this.$router.push('/goods/add')\r\n+    }\r\n   }\r\n+\r\n+————————————————\r\n+版权声明：本文为CSDN博主「晓宜」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n+原文链接：https://blog.csdn.net/qq_51118755/article/details/127483766\r\n }\r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n"
+                },
+                {
+                    "date": 1681632882364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,14 @@\n           </template>\r\n         </el-table-column>\r\n       </el-table> -->\r\n \r\n+      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      </el-pagination>\r\n+\r\n+————————————————\r\n+版权声明：本文为CSDN博主「晓宜」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n+原文链接：https://blog.csdn.net/qq_51118755/article/details/127483766\r\n     </el-card>\r\n     \r\n  \r\n \r\n@@ -121,11 +127,8 @@\n       this.$router.push('/goods/add')\r\n     }\r\n   }\r\n \r\n-————————————————\r\n-版权声明：本文为CSDN博主「晓宜」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n-原文链接：https://blog.csdn.net/qq_51118755/article/details/127483766\r\n }\r\n </script>\r\n  \r\n <style lang=\"less\" scoped>\r\n"
+                },
+                {
+                    "date": 1681632896394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <!-- <el-table :data=\"goodslist\" border stripe>\r\n+      <el-table :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n@@ -36,16 +36,13 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" @click=\"removeById(scope.row.goods_id)\"></el-button>\r\n           </template>\r\n         </el-table-column>\r\n-      </el-table> -->\r\n+      </el-table>\r\n \r\n       <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n       </el-pagination>\r\n \r\n-————————————————\r\n-版权声明：本文为CSDN博主「晓宜」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n-原文链接：https://blog.csdn.net/qq_51118755/article/details/127483766\r\n     </el-card>\r\n     \r\n  \r\n \r\n"
+                },
+                {
+                    "date": 1681632952276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,12 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table :data=\"goodslist\" border stripe>\r\n+      <el-table-column :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n+        <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681632958313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       <!-- table表格区域 -->\r\n       <el-table-column :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n-        <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n+        <el-table-column label=\"商品图片\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681632966076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       <!-- table表格区域 -->\r\n       <el-table-column :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n-        <el-table-column label=\"商品图片\" prop=\"goods_name\"></el-table-column>\r\n+        <el-table-column label=\"商品图片\" prop=\"goods_img\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681632993520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table-column :data=\"goodslist\" border stripe>\r\n+      <el-table-column :data=\"goodslist\"  stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品图片\" prop=\"goods_img\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n"
+                },
+                {
+                    "date": 1681633000132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table-column :data=\"goodslist\"  stripe>\r\n+      <el-table-column :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品图片\" prop=\"goods_img\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n"
+                },
+                {
+                    "date": 1681633005694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       <!-- table表格区域 -->\r\n       <el-table-column :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n-        <el-table-column label=\"商品图片\" prop=\"goods_img\"></el-table-column>\r\n+        <!-- <el-table-column label=\"商品图片\" prop=\"goods_img\"></el-table-column> -->\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681633031190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,11 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table-column :data=\"goodslist\" border stripe>\r\n+      <!-- <el-table :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n-        <!-- <el-table-column label=\"商品图片\" prop=\"goods_img\"></el-table-column> -->\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n@@ -37,9 +36,9 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" @click=\"removeById(scope.row.goods_id)\"></el-button>\r\n           </template>\r\n         </el-table-column>\r\n-      </el-table>\r\n+      </el-table> -->\r\n \r\n       <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n       </el-pagination>\r\n \r\n"
+                },
+                {
+                    "date": 1681633063451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <el-button type=\"primary\" @click=\"goAddpage\">添加商品</el-button>\r\n         </el-col>\r\n       </el-row>\r\n  \r\n-      <!-- table表格区域 -->\r\n+      table表格区域 -->\r\n       <!-- <el-table :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n@@ -36,9 +36,9 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" @click=\"removeById(scope.row.goods_id)\"></el-button>\r\n           </template>\r\n         </el-table-column>\r\n-      </el-table> -->\r\n+      </el-table>\r\n \r\n       <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n       </el-pagination>\r\n \r\n"
+                },
+                {
+                    "date": 1681633074292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n           <el-button type=\"primary\" @click=\"goAddpage\">添加商品</el-button>\r\n         </el-col>\r\n       </el-row>\r\n  \r\n-      table表格区域 -->\r\n-      <!-- <el-table :data=\"goodslist\" border stripe>\r\n+      <!-- table表格区域 -->\r\n+      <el-table :data=\"goodslist\" border stripe>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n"
+                },
+                {
+                    "date": 1681633092771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,58 +72,9 @@\n   created() {\r\n     this.getGoodsList()\r\n   },\r\n   methods: {\r\n-    // 根据分页获取对应的商品列表\r\n-    async getGoodsList() {\r\n-      const { data: res } = await this.$http.get('goods', {\r\n-        params: this.queryInfo\r\n-      })\r\n- \r\n-      if (res.meta.status !== 200) {\r\n-        return this.$message.error('获取商品列表失败！')\r\n-      }\r\n- \r\n-      this.$message.success('获取商品列表成功！')\r\n-      console.log(res.data)\r\n-      this.goodslist = res.data.goods\r\n-      this.total = res.data.total\r\n-    },\r\n-    handleSizeChange(newSize) {\r\n-      this.queryInfo.pagesize = newSize\r\n-      this.getGoodsList()\r\n-    },\r\n-    handleCurrentChange(newPage) {\r\n-      this.queryInfo.pagenum = newPage\r\n-      this.getGoodsList()\r\n-    },\r\n-    async removeById(id) {\r\n-      const confirmResult = await this.$confirm(\r\n-        '此操作将永久删除该商品, 是否继续?',\r\n-        '提示',\r\n-        {\r\n-          confirmButtonText: '确定',\r\n-          cancelButtonText: '取消',\r\n-          type: 'warning'\r\n-        }\r\n-      ).catch(err => err)\r\n- \r\n-      if (confirmResult !== 'confirm') {\r\n-        return this.$message.info('已经取消删除！')\r\n-      }\r\n- \r\n-      const { data: res } = await this.$http.delete(`goods/${id}`)\r\n- \r\n-      if (res.meta.status !== 200) {\r\n-        return this.$message.error('删除失败！')\r\n-      }\r\n- \r\n-      this.$message.success('删除成功！')\r\n-      this.getGoodsList()\r\n-    },\r\n-    goAddpage() {\r\n-      this.$router.push('/goods/add')\r\n-    }\r\n+    \r\n   }\r\n \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1681633104661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n       total: 0\r\n     }\r\n   },\r\n   created() {\r\n-    this.getGoodsList()\r\n+   \r\n   },\r\n   methods: {\r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1681633110900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,18 +56,9 @@\n \r\n export default {\r\n   data() {\r\n     return {\r\n-      // 查询参数对象\r\n-      queryInfo: {\r\n-        query: '',\r\n-        pagenum: 1,\r\n-        pagesize: 10\r\n-      },\r\n-      // 商品列表\r\n-      goodslist: [],\r\n-      // 总数据条数\r\n-      total: 0\r\n+     \r\n     }\r\n   },\r\n   created() {\r\n    \r\n"
+                },
+                {
+                    "date": 1681633129736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table :data=\"goodslist\" border stripe>\r\n+      <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n"
+                },
+                {
+                    "date": 1681633151928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,18 +38,18 @@\n           </template>\r\n         </el-table-column>\r\n       </el-table>\r\n \r\n-      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n-      </el-pagination>\r\n+      \r\n \r\n     </el-card>\r\n     \r\n  \r\n \r\n  \r\n       <!-- 分页区域 -->\r\n-      \r\n+      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      </el-pagination>\r\n   </div>\r\n </template>\r\n  \r\n <script>\r\n"
+                },
+                {
+                    "date": 1681633167074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n-            {{scope.row.add_time | dateFormat}}\r\n+            {{}}\r\n           </template>\r\n         </el-table-column>\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n@@ -40,16 +40,17 @@\n       </el-table>\r\n \r\n       \r\n \r\n-    </el-card>\r\n+  \r\n     \r\n  \r\n \r\n  \r\n       <!-- 分页区域 -->\r\n       <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n       </el-pagination>\r\n+    </el-card>\r\n   </div>\r\n </template>\r\n  \r\n <script>\r\n"
+                },
+                {
+                    "date": 1681633185562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </el-table-column>\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n-            <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" @click=\"removeById(scope.row.goods_id)\"></el-button>\r\n+            <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n           </template>\r\n         </el-table-column>\r\n       </el-table>\r\n \r\n"
+                },
+                {
+                    "date": 1681633192429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n-            {{}}\r\n+            <!-- {{}} -->\r\n           </template>\r\n         </el-table-column>\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681633218076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card>\r\n-      <el-row :gutter=\"20\">\r\n+      <el-row >\r\n         <el-col :span=\"8\">\r\n           <el-input placeholder=\"请输入内容\" v-model=\"queryInfo.query\" clearable @clear=\"getGoodsList\">\r\n             <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"getGoodsList\"></el-button>\r\n           </el-input>\r\n"
+                },
+                {
+                    "date": 1681633229517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,11 @@\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n     <el-card>\r\n-      <el-row >\r\n+      <el-row>\r\n         <el-col :span=\"8\">\r\n-          <el-input placeholder=\"请输入内容\" v-model=\"queryInfo.query\" clearable @clear=\"getGoodsList\">\r\n+          <el-input placeholder=\"请输入内容\" >\r\n             <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"getGoodsList\"></el-button>\r\n           </el-input>\r\n         </el-col>\r\n         <el-col :span=\"4\">\r\n"
+                },
+                {
+                    "date": 1681633249913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,13 @@\n     <el-card>\r\n       <el-row>\r\n         <el-col :span=\"8\">\r\n           <el-input placeholder=\"请输入内容\" >\r\n-            <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"getGoodsList\"></el-button>\r\n+            <el-button slot=\"append\" icon=\"el-icon-search\"></el-button>\r\n           </el-input>\r\n         </el-col>\r\n         <el-col :span=\"4\">\r\n-          <el-button type=\"primary\" @click=\"goAddpage\">添加商品</el-button>\r\n+          <el-button type=\"primary\" >添加商品</el-button>\r\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n"
+                },
+                {
+                    "date": 1681633296466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n  \r\n \r\n  \r\n       <!-- 分页区域 -->\r\n-      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n-      </el-pagination>\r\n+      <!-- <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      </el-pagination> -->\r\n     </el-card>\r\n   </div>\r\n </template>\r\n  \r\n"
+                },
+                {
+                    "date": 1681633315189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n  \r\n \r\n  \r\n       <!-- 分页区域 -->\r\n-      <!-- <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n-      </el-pagination> -->\r\n+      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      </el-pagination>\r\n     </el-card>\r\n   </div>\r\n </template>\r\n  \r\n"
+                },
+                {
+                    "date": 1681633328702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n  \r\n \r\n  \r\n       <!-- 分页区域 -->\r\n-      <el-pagination @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" :current-page=\"queryInfo.pagenum\" :page-sizes=\"[5, 10, 15, 20]\" :page-size=\"queryInfo.pagesize\" layout=\"total, sizes, prev, pager, next, jumper\" :total=\"total\" background>\r\n+      <el-pagination>\r\n       </el-pagination>\r\n     </el-card>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1681633494764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,11 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table>\r\n+      <el-table-column>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n+        <el-table-column label=\"商品图片\" prop=\"goods_img\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n"
+                },
+                {
+                    "date": 1681633502821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n-            <!-- {{}} -->\r\n+           \r\n           </template>\r\n         </el-table-column>\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681633551924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,17 @@\n  \r\n       <!-- table表格区域 -->\r\n       <el-table-column>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n-        <el-table-column label=\"商品图片\" prop=\"goods_img\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n-           \r\n+            <!-- {{}} -->\r\n           </template>\r\n         </el-table-column>\r\n+\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n"
+                },
+                {
+                    "date": 1681633581518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table-column>\r\n+      <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n@@ -30,9 +30,8 @@\n           <template slot-scope=\"scope\">\r\n             <!-- {{}} -->\r\n           </template>\r\n         </el-table-column>\r\n-\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n"
+                },
+                {
+                    "date": 1681633602092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n       <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n-        <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"70px\"></el-table-column>\r\n+        <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n             <!-- {{}} -->\r\n           </template>\r\n"
+                },
+                {
+                    "date": 1681633634724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n             <!-- {{}} -->\r\n-          </template>\r\n-        </el-table-column>\r\n+       </template>\r\n+      </el-table-column>\r\n         <el-table-column label=\"操作\" width=\"130px\">\r\n           <template slot-scope=\"scope\">\r\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n"
+                },
+                {
+                    "date": 1681633659091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n           </template>\r\n         </el-table-column>\r\n+        \r\n       </el-table>\r\n \r\n       \r\n \r\n"
+                },
+                {
+                    "date": 1681633716210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,15 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table>\r\n+      <el-table-column>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n+\r\n+        <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n             <!-- {{}} -->\r\n        </template>\r\n@@ -36,9 +38,9 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n           </template>\r\n         </el-table-column>\r\n-        \r\n+\r\n       </el-table>\r\n \r\n       \r\n \r\n"
+                },
+                {
+                    "date": 1681633725831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,15 +20,13 @@\n         </el-col>\r\n       </el-row>\r\n  \r\n       <!-- table表格区域 -->\r\n-      <el-table-column>\r\n+      <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n         <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n-\r\n-        <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n             <!-- {{}} -->\r\n        </template>\r\n@@ -38,9 +36,9 @@\n             <el-button type=\"primary\" icon=\"el-icon-edit\" size=\"mini\"></el-button>\r\n             <el-button type=\"danger\" icon=\"el-icon-delete\" size=\"mini\" ></el-button>\r\n           </template>\r\n         </el-table-column>\r\n-\r\n+        \r\n       </el-table>\r\n \r\n       \r\n \r\n"
+                },
+                {
+                    "date": 1681633754556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n  \r\n       <!-- table表格区域 -->\r\n       <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n-        <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n+        <el-table-column label=\"商品名称\" prop=\"goods_name\" width=\"200px\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681633761264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n  \r\n       <!-- table表格区域 -->\r\n       <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n-        <el-table-column label=\"商品名称\" prop=\"goods_name\" width=\"200px\"></el-table-column>\r\n+        <el-table-column label=\"商品名称\" prop=\"goods_name\" width=\"600px\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681633770233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n  \r\n       <!-- table表格区域 -->\r\n       <el-table>\r\n         <el-table-column type=\"index\"></el-table-column>\r\n-        <el-table-column label=\"商品名称\" prop=\"goods_name\" width=\"600px\"></el-table-column>\r\n+        <el-table-column label=\"商品名称\" prop=\"goods_name\"></el-table-column>\r\n         <el-table-column label=\"商品价格(元)\" prop=\"goods_price\" width=\"95px\"></el-table-column>\r\n         <el-table-column label=\"商品重量\" prop=\"goods_weight\" width=\"80px\"></el-table-column>\r\n         <el-table-column label=\"创建时间\" prop=\"add_time\" width=\"140px\">\r\n           <template slot-scope=\"scope\">\r\n"
+                },
+                {
+                    "date": 1681633823576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       <el-breadcrumb-item>商品列表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n  \r\n     <!-- 卡片视图区域 -->\r\n-    <el-card>\r\n+    <el-card class=\"box-card\">\r\n       <el-row>\r\n         <el-col :span=\"8\">\r\n           <el-input placeholder=\"请输入内容\" >\r\n             <el-button slot=\"append\" icon=\"el-icon-search\"></el-button>\r\n"
                 }
             ],
             "date": 1681526529078,
